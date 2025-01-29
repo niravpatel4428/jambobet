@@ -13,7 +13,6 @@ const Header = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenRGS, setIsModalOpenRGS] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -30,6 +29,7 @@ const Header = () => {
   };
 
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
