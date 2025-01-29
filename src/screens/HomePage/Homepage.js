@@ -7,33 +7,33 @@ import mobiledark from "../../images/mobiledark.svg";
 
 const Homepage = () => {
 
-    useEffect(() => {
-        // Detect user's system preference
-        const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-        if (isDarkMode) {
-          document.documentElement.classList.add('dark'); // Add the 'dark' class to <html>
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-    
-        // Optional: Listen for changes in the user's system preference
-        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-        const handleChange = (event) => {
-          if (event.matches) {
-            document.documentElement.classList.add('dark');
-          } else {
-            document.documentElement.classList.remove('dark');
-          }
-        };
-    
-        mediaQuery.addEventListener('change', handleChange);
-    
-        // Cleanup event listener
-        return () => mediaQuery.removeEventListener('change', handleChange);
-      }, []);
+    const [isDarkMode, setIsDarkMode] = useState(
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+    );
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    useEffect(() => {
+        const updateTheme = () => {
+            if (isDarkMode) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        };
+
+        updateTheme();
+
+        // Listen for system preference changes
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleChange = (event) => setIsDarkMode(event.matches);
+
+        mediaQuery.addEventListener('change', handleChange);
+
+        return () => mediaQuery.removeEventListener('change', handleChange);
+    }, [isDarkMode]);
+
+    const toggleDarkMode = () => {
+        setIsDarkMode((prevMode) => !prevMode);
+    };
 
     const toggleTheme = () => {
         // Toggle the dark mode theme
