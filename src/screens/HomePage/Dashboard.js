@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import symbol1 from "../../images/symbol1.png";
-import symbol2 from "../../images/symbol2.png";
+import symbol2 from "../../images/symbol2.png"; 
 import symbol3 from "../../images/symbol3.png";
 import symbol4 from "../../images/symbol4.png";
-import symbol5 from "../../images/symbol5.png";
+import symbol5 from "../../images/symbol5.png"; 
 import symbol6 from "../../images/symbol6.png";
 import dashboardimg from "../../images/dashboardimg.png";
 import dashboardimg2 from "../../images/dashboardimg2.png";
@@ -26,6 +26,7 @@ import email from "../../images/email.svg";
 import safari from "../../images/safari.png";
 import airtel from "../../images/airtel.png";
 import close from "../../images/close.svg";
+import greater from "../../images/greater.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -40,8 +41,6 @@ const Dashboard = () => {
     const handleOddClick = (id) => {
         setActiveOdd((prev) => (prev === id ? null : id)); // Toggle active state
     };
-
-    const [isOpen, setIsOpen] = useState(false);
 
     const [isLeaguesVisible, setIsLeaguesVisible] = useState(true);
 
@@ -130,6 +129,11 @@ const Dashboard = () => {
 
     const handleToggle = () => {
         setIsToggled(!isToggled);
+    };
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleToggles = () => {
         setIsOpen(!isOpen);
     };
 
@@ -445,8 +449,8 @@ const Dashboard = () => {
                                     { label: "X or 2", value: "2.11", colSpan: 4, highlight: false },
                                 ],
                                 [
-                                    { label: "yes", value: "1.85", colSpan: 1, highlight: false },
-                                    { label: "no", value: "1.85", colSpan: 1, highlight: false },
+                                    { label: "yes", value: "1.85", colSpan: 6, highlight: false },
+                                    { label: "no", value: "1.85", colSpan: 6, highlight: false },
                                 ],
                             ],
                         },
@@ -470,8 +474,8 @@ const Dashboard = () => {
                                     { label: "X or 2", value: "2.11", colSpan: 4, highlight: false },
                                 ],
                                 [
-                                    { label: "yes", value: "1.85", colSpan: 1, highlight: false },
-                                    { label: "no", value: "1.85", colSpan: 1, highlight: false },
+                                    { label: "yes", value: "1.85", colSpan: 6, highlight: false },
+                                    { label: "no", value: "1.85", colSpan: 6, highlight: false },
                                 ],
                             ],
                         },
@@ -495,8 +499,8 @@ const Dashboard = () => {
                                     { label: "X or 2", value: "1.97", colSpan: 4, highlight: false },
                                 ],
                                 [
-                                    { label: "yes", value: "1.68", colSpan: 1, highlight: false },
-                                    { label: "no", value: "2.11", colSpan: 1, highlight: false },
+                                    { label: "yes", value: "1.68", colSpan: 6, highlight: false },
+                                    { label: "no", value: "2.11", colSpan: 6, highlight: false },
                                 ],
                             ],
                         },
@@ -885,11 +889,50 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
+                <div className="mt-5">
+                    <div className="flex gap-2 xl:gap-[13px] justify-center items-center">
+                        <div>
+                            <img
+                                src={greater}
+                                alt="greater"
+                                className="object-contain cursor-pointer rotate-180  dark:brightness-[100] dark:hover:brightness-50"
+                            />
+                        </div>
+                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
+                            1
+                        </div>
+                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
+                            2
+                        </div>
+                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
+                            3
+                        </div>
+                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
+                            4
+                        </div>
+                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
+                            5
+                        </div>
+                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold  dark:hover:text-white dark:text-white hover:text-white transition-all duration-300 flex justify-center items-center">
+                            ...
+                        </div>
+                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
+                            50
+                        </div>
+                        <div>
+                            <img
+                                src={greater}
+                                alt="greater"
+                                className="object-contain cursor-pointer  dark:brightness-[100] dark:hover:brightness-50"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
             <div className='s15:hidden flex justify-center items-center fixed bottom-0 z-[9] left-[50%] translate-x-[-50%] w-full max-w-[428px] mx-auto rounded-[20px_20px_0px_0px] bg-[#2F425C] p-[40px_15px_25px]'>
                 <span
                     className='select-none cursor-pointer border-solid border-r-[1px] border-r-doubleextralightwhite inline-flex flex-col items-center gap-[7px] p-[0px] text-white text-[18px] font-medium leading-[100%]'
-                    onClick={handleToggle}
+                    onClick={handleToggles}
                 >
                     {isOpen ? (
                         <>
