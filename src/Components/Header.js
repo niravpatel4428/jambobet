@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"; 
-import { Link } from "react-router-dom"; 
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-import search from "../images/search.svg"; 
+import search from "../images/search.svg";
 import light from "../images/light.svg";
 import dark from "../images/dark.svg";
 import darksearch from "../images/darksearch.svg";
@@ -10,6 +10,30 @@ import Register from "./Register";
 import Login from "./Login";
 
 const Header = () => {
+
+  const [isDarkMode, setIsDarkMode] = useState(
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
+
+  useEffect(() => {
+    const updateTheme = () => {
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    };
+
+    updateTheme();
+
+    // Listen for system preference changes
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (event) => setIsDarkMode(event.matches);
+
+    mediaQuery.addEventListener('change', handleChange);
+
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [isDarkMode]);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenRGS, setIsModalOpenRGS] = useState(false);
@@ -29,11 +53,11 @@ const Header = () => {
   };
 
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const toggleCollapse = () => {
     setIsCollapsed(!isCollapsed);
   };
   const toggleTheme = () => {
+    setIsDarkMode((prevMode) => !prevMode);
     // Toggle the dark mode theme
     const newTheme = isDarkMode ? "light" : "dark";
     localStorage.setItem("theme", newTheme);
@@ -185,7 +209,7 @@ const Header = () => {
               <Link
                 onClick={openModalRGS}
                 className="min-w-[88px] bg-yellow border border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-[11px_8px] text-[16px] leading-[150%] font-medium transition-all duration-[0.3s] hover:bg-transparent hover:border-yellow hover:text-yellow"
-               
+
               >
                 Join Now
               </Link>
