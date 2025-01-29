@@ -7,29 +7,7 @@ import mobiledark from "../../images/mobiledark.svg";
 
 const Casinopage = () => {
 
-    const [isDarkMode, setIsDarkMode] = useState(
-            window.matchMedia('(prefers-color-scheme: dark)').matches
-        );
-    
-        useEffect(() => {
-            const updateTheme = () => {
-                if (isDarkMode) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
-            };
-    
-            updateTheme();
-    
-            // Listen for system preference changes
-            const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-            const handleChange = (event) => setIsDarkMode(event.matches);
-    
-            mediaQuery.addEventListener('change', handleChange);
-    
-            return () => mediaQuery.removeEventListener('change', handleChange);
-        }, [isDarkMode]);
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     const toggleTheme = () => {
         setIsDarkMode((prevMode) => !prevMode);
