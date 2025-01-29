@@ -34,7 +34,6 @@ const Header = () => {
     setIsCollapsed(!isCollapsed);
   };
   const toggleTheme = () => {
-    setIsDarkMode((prevMode) => !prevMode);
     // Toggle the dark mode theme
     const newTheme = isDarkMode ? "light" : "dark";
     localStorage.setItem("theme", newTheme);
