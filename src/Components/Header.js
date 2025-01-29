@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 import logo from "../images/logo.png";
-import search from "../images/search.svg";
+import search from "../images/search.svg"; 
 import light from "../images/light.svg";
 import dark from "../images/dark.svg";
 import darksearch from "../images/darksearch.svg";
@@ -185,7 +185,7 @@ const Header = () => {
               <Link
                 onClick={openModalRGS}
                 className="min-w-[88px] bg-yellow border border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-[11px_8px] text-[16px] leading-[150%] font-medium transition-all duration-[0.3s] hover:bg-transparent hover:border-yellow hover:text-yellow"
-
+               
               >
                 Join Now
               </Link>

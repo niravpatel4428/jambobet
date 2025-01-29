@@ -4,11 +4,10 @@ import Layout from '../../layout'
 import Slidersection from '../HomePage/Slider'
 
 const Casinopage = () => {
-
     return (
         <>
             <Layout>
-                <Slidersection />
+                <Slidersection/>
                 <Casino />
             </Layout>
         </>

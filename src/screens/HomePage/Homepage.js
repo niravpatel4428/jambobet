@@ -4,12 +4,11 @@ import Slidersection from './Slider'
 import Dashboard from './Dashboard'
 
 const Homepage = () => {
-
     return (
         <>
             <Layout>
-                <Slidersection />
-                <Dashboard />
+                <Slidersection/>
+                <Dashboard/>
             </Layout>
         </>
     )

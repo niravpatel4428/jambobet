@@ -4,12 +4,11 @@ import Transaction from './Transaction'
 import Slidersection from '../HomePage/Slider'
 
 const Transactionpage = () => {
-
     return (
         <>
             <Layout>
-                <Slidersection />
-                <Transaction />
+                <Slidersection/>
+                <Transaction/>
             </Layout>
         </>
     )

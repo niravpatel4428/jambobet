@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import symbol1 from "../../images/symbol1.png";
-import symbol2 from "../../images/symbol2.png"; 
+import symbol2 from "../../images/symbol2.png";
 import symbol3 from "../../images/symbol3.png";
 import symbol4 from "../../images/symbol4.png";
 import symbol5 from "../../images/symbol5.png"; 
@@ -26,7 +26,6 @@ import email from "../../images/email.svg";
 import safari from "../../images/safari.png";
 import airtel from "../../images/airtel.png";
 import close from "../../images/close.svg";
-import greater from "../../images/greater.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -886,45 +885,6 @@ const Dashboard = () => {
                                     </ul>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="mt-5">
-                    <div className="flex gap-2 xl:gap-[13px] justify-center items-center">
-                        <div>
-                            <img
-                                src={greater}
-                                alt="greater"
-                                className="object-contain cursor-pointer rotate-180  dark:brightness-[100] dark:hover:brightness-50"
-                            />
-                        </div>
-                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
-                            1
-                        </div>
-                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
-                            2
-                        </div>
-                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
-                            3
-                        </div>
-                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
-                            4
-                        </div>
-                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
-                            5
-                        </div>
-                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold  dark:hover:text-white dark:text-white hover:text-white transition-all duration-300 flex justify-center items-center">
-                            ...
-                        </div>
-                        <div className="rounded-[4px] cursor-pointer size-5 xl:size-8 text-[#555752] text-xs xl:text-sm font-semibold dark:bg-white/30 dark:hover:bg-white bg-darkblue/10 dark:hover:text-darkblue dark:text-white hover:text-white hover:bg-darkblue transition-all duration-300 flex justify-center items-center">
-                            50
-                        </div>
-                        <div>
-                            <img
-                                src={greater}
-                                alt="greater"
-                                className="object-contain cursor-pointer  dark:brightness-[100] dark:hover:brightness-50"
-                            />
                         </div>
                     </div>
                 </div>
