@@ -31,11 +31,9 @@ const Homepage = () => {
         return () => mediaQuery.removeEventListener('change', handleChange);
     }, [isDarkMode]);
 
-    const toggleDarkMode = () => {
-        setIsDarkMode((prevMode) => !prevMode);
-    };
-
     const toggleTheme = () => {
+
+        setIsDarkMode((prevMode) => !prevMode);
         // Toggle the dark mode theme
         const newTheme = isDarkMode ? "light" : "dark";
         localStorage.setItem("theme", newTheme);
