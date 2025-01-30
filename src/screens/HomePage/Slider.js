@@ -7,7 +7,7 @@ import slider2img from "../../images/slider2img.png";
 import slider3img from "../../images/slider3img.png";
 import slider4img from "../../images/slider4img.png";
 import slider5img from "../../images/slider5img.png";
-import slider6img from "../../images/slider6img.png";
+import slider6img from "../../images/slider6img.png"; 
 import slider7img from "../../images/slider7img.png";
 import slider8img from "../../images/slider8img.png";
 import slider9img from "../../images/slider9img.png";
@@ -162,7 +162,7 @@ const Slidersection = () => {
     };
 
     return (
-        <div className="max-[420px]:overflow-hidden image-slider max-[420px]:pt-[80px] max-md:pt-[104px] pt-[120px] relative max-sm:px-[15px] px-[20px] max-sm:mb-[10px] mb-[20px] mt-[-1px]">
+        <div className="max-[420px]:overflow-hidden image-slider max-[420px]:pt-[80px] max-md:pt-[104px] md:pt-[90px] s15:pt-[120px] relative max-sm:px-[15px] px-[20px] max-sm:mb-[10px] mb-[20px] mt-[-1px]">
             <div className="max-sm:p-[15px_20px_15px_20px] p-[21px_20px_20px_20px] border border-solid rounded-[0px_0px_20px_20px] dark:bg-[#182D4A] bg-lightyellow shadow-inputshadow border-yellow dark:border-[#5D6C80]">
                 <div className="max-[575px]:justify-center max-md:ml-[0px] max-lg:p-[0px] p-[0px_0px_0px_18px] grid grid-cols-12 gap-[35px] items-center">
                     <div className="max-[575px]:hidden max-[575px]:col-span-0 col-span-1">

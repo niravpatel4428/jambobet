@@ -552,7 +552,7 @@ const Dashboard = () => {
                                             ))}
                                         </div>
                                     )}
-                                </div>
+                                </div> 
                                 <div className="rounded-[6px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow mt-[12px]">
                                     <div
                                         className="dropdown-block cursor-pointer flex items-center justify-between rounded-[6px_6px_0px_0px] p-[8px_10px] xl:p-[8px_15px] bg-darkblue dark:bg-bluedarkmode"
@@ -912,7 +912,7 @@ const Dashboard = () => {
                 </span>
             </div>
             <div className={`open-content ${isOpen ? 'block' : 'hidden'}`}>
-                <div className='odd-conected overflow-auto max-h-[550px] block fixed bottom-[120px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full'>
+                <div className='odd-conected overflow-auto max-h-[400px] block fixed bottom-[120px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full'>
                     <div className='flex items-center rounded-[7px_7px_0px_0px] bg-darkblue dark:bg-bluedarkmode px-[15px]'>
                         <span className='cursor-pointer border-solid border-r-[1px] border-r-doubleextralightwhite w-[50%] flex items-center gap-[7px] p-[10px_0px] text-white text-[18px] font-medium leading-[100%]'><span className='flex w-[32px] h-[32px] justify-center items-center bg-yellow rounded-[50%] text-black text-[19px] font-medium leading-[100%]'>1</span> Betslip</span>
                         <span className='show-content cursor-pointer w-[50%] flex justify-center items-center p-[10px_0px] text-white text-[18px] font-medium leading-[100%]'>My bets</span>

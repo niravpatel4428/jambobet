@@ -9,7 +9,7 @@ import login from "../images/login.svg";
 import Register from "./Register";
 import Login from "./Login";
 
-const Header = () => {
+const Header = () => { 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenRGS, setIsModalOpenRGS] = useState(false);
@@ -73,7 +73,7 @@ const Header = () => {
 
   return (
     <>
-      <section className="fixed top-0 left-0 right-0 w-full bg-[#0C2240] dark:bg-[#30435D] z-50 max-[420px]:py-[25px] max-md:py-[32px] py-[35px]">
+      <section className="fixed top-0 left-0 right-0 w-full bg-[#0C2240] dark:bg-[#30435D] z-50 max-[420px]:py-[25px] max-md:py-[32px] md:py-[20px] s15:py-[35px]">
         <div className="flex max-xl:justify-between items-center w-full max-w-[1780px] mx-auto max-sm:px-[15px] px-[30px]">
           <div className="max-420: relative z-[100] flex max-xl:pl-[40px]">
             <Link to="/" className="inline-block">
