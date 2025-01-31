@@ -65,29 +65,29 @@ const Transaction = () => {
 
     return (
         <>
-            <div className='p-[10px_15px_70px] md:p-[10px_20px_70px] xl:p-[20px_30px_100px]'>
+            <div className='p-[10px_15px_40px] md:p-[10px_20px_40px] s16:p-[15px_30px_60px] s18:p-[20px_30px_100px]'>
                 <div className="overflow-hidden shadow-dashboardshadow w-full max-w-[1780px] mx-auto bg-doubleextralightwhite rounded-[18px] md:rounded-[25px] border border-solid border-lightblueborder dark:border-[#0C3D8C] dark:bg-[#243853]">
                     <div className='overflow-auto'>
-                        <div className="min-w-[900px] flex flex-wrap items-center justify-between p-[20px_20px] xl:p-[20px_37px] bg-lightbluebg rounded-[18px_18px_0px_0px] md:rounded-[25px_25px_0px_0px] border border-solid border-b-extrathinblack dark:bg-[#667487] dark:border-[#667487]">
+                        <div className="min-w-[900px] flex flex-wrap items-center justify-between p-[20px_20px] md:p-[10px_37px] s16:p-[16px_37px] s18:p-[20px_37px] bg-lightbluebg rounded-[18px_18px_0px_0px] md:rounded-[25px_25px_0px_0px] border border-solid border-b-extrathinblack dark:bg-[#667487] dark:border-[#667487]">
                             <div className="flex items-center gap-[30px] xl:gap-[75px]">
                                 <div className='flex items-center gap-[13px]'>
-                                    <label className="text-[20px] xl:text-[22px] text-mutedblue font-bold leading-[160%] dark:text-white">From:</label>
+                                    <label className="text-sm xl:text-base s15:text-[20px] s18:text-[22px] text-mutedblue font-bold  !leading-tight s18:!leading-[160%] dark:text-white">From:</label>
                                     <input
                                         type="date"
-                                        className="text-mutedblue text-[16px] xl:text-[22px] font-bold leading-[160%] shadow-dashboardshadow border border-solid bg-white rounded-[6px] min-w-[180px] xl:min-w-[227px] py-2 px-2 xl:px-4 xl:py-4 w-full"
+                                        className="text-mutedblue text-sm s16:text-lg s18:text-[22px] font-bold  !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white rounded-[6px] min-w-[180px] xl:min-w-[227px] py-2 px-2 md:px-3 s18:px-4 md:py-2 s18:py-4 w-full"
                                     />
                                 </div>
                                 <div className='flex items-center gap-[13px]'>
-                                    <label className="text-[20px] xl:text-[22px] text-mutedblue font-bold leading-[160%] dark:text-white">To:</label>
+                                    <label className="text-sm xl:text-base s15:text-[20px] s18:text-[22px] text-mutedblue font-bold  !leading-tight s18:!leading-[160%] dark:text-white">To:</label>
                                     <input
                                         type="date"
-                                        className="text-mutedblue text-[16px] xl:text-[22px] py-2 px-2 font-bold leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[180px] xl:min-w-[227px] rounded-[6px] xl:px-4 xl:py-4 w-full"
+                                        className="text-mutedblue text-sm s16:text-lg s18:text-[22px] font-bold  !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[180px] xl:min-w-[227px] rounded-[6px] py-2 px-2 md:px-3 s18:px-4 md:py-2 s18:py-4 w-full"
                                     />
                                 </div>
                             </div>
                             <div className='flex items-center gap-[13px]'>
-                                <label className="text-[20px] xl:text-[22px] text-mutedblue font-bold leading-[160%] dark:text-white">Type:</label>
-                                <select className="select text-mutedblue text-[16px] xl:text-[22px] py-2 px-2 font-bold leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[190px] rounded-[6px] xl:px-4 xl:py-4 w-full appearance-none outline-none">
+                                <label className="text-sm xl:text-base s15:text-[20px] s18:text-[22px] text-mutedblue font-bold leading-[160%] dark:text-white">Type:</label>
+                                <select className="select text-mutedblue text-sm s16:text-lg s18:text-[22px] py-2 px-2 font-bold !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[190px] rounded-[6px] md:px-3 s18:px-4 md:py-2 s18:py-4 w-full appearance-none outline-none">
                                     <option>All</option>
                                     <option>Type 1</option>
                                     <option>Type 2</option>
@@ -97,15 +97,15 @@ const Transaction = () => {
                     </div>
 
                     {/* Table Section */}
-                    <div className="overflow-auto p-[15px] md:p-[15px_25px] xl:p-[15px_35px]">
+                    <div className="overflow-auto p-[15px] md:p-[10px_25px] xl:p-[12px_35px] s18:p-[15px_35px]">
                         <table className="table-auto w-full min-w-[900px] text-sm text-left">
                             <thead>
                                 <tr className="">
-                                    <th className="px-[15px] xl:px-[23px] py-4 text-black text-[16px] md:text-[18px] xl:text-[22px] font-bold leading-[159%] dark:text-white">Reference ID</th>
-                                    <th className="px-[15px] xl:px-[23px] py-4 text-black text-[16px] md:text-[18px] xl:text-[22px] font-bold leading-[159%] dark:text-white">Date/Time</th>
-                                    <th className="px-[15px] xl:px-[23px] py-4 text-black text-[16px] md:text-[18px] xl:text-[22px] font-bold leading-[159%] dark:text-white">Description</th>
-                                    <th className="px-[15px] xl:px-[23px] py-4 text-black text-[16px] md:text-[18px] xl:text-[22px] font-bold leading-[159%] dark:text-white">Amount</th>
-                                    <th className="px-[15px] xl:px-[23px] py-4 text-black text-[16px] md:text-[18px] xl:text-[22px] font-bold leading-[159%] dark:text-white">Balance</th>
+                                    <th className="px-[15px] py-[10px] s15:py-3 s18:px-[23px] text-black text-sm s15:text-base s18:text-[22px] font-bold !leading-snug s18:leading-[159%] dark:text-white">Reference ID</th>
+                                    <th className="px-[15px] py-[10px] s15:py-3 s18:px-[23px] text-black text-sm s15:text-base s18:text-[22px] font-bold !leading-snug s18:leading-[159%] dark:text-white">Date/Time</th>
+                                    <th className="px-[15px] py-[10px] s15:py-3 s18:px-[23px] text-black text-sm s15:text-base s18:text-[22px] font-bold !leading-snug s18:leading-[159%] dark:text-white">Description</th>
+                                    <th className="px-[15px] py-[10px] s15:py-3 s18:px-[23px] text-black text-sm s15:text-base s18:text-[22px] font-bold !leading-snug s18:leading-[159%] dark:text-white">Amount</th>
+                                    <th className="px-[15px] py-[10px] s15:py-3 s18:px-[23px] text-black text-sm s15:text-base s18:text-[22px] font-bold !leading-snug s18:leading-[159%] dark:text-white">Balance</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -113,13 +113,13 @@ const Transaction = () => {
                                     <tr
                                         key={index}
                                         className={`${index % 2 === 0 ? "bg-tableblue dark:bg-[#2F425C]" : "bg-transparent"
-                                            } text-[#0C3D8C] dark:text-white text-[16px] md:text-[18px] xl:text-[24px] font-light leading-[141%] rounded-[12px] font-poppins`}
+                                            } text-[#0C3D8C] dark:text-white text-sm s15:text-base s18:text-2xl font-light s18:leading-[141%] !leading-tight rounded-[12px] font-poppins`}
                                     >
-                                        <td className="py-[17px] xl:py-[25px] px-[15px] xl:px-[23px] font-medium rounded-[12px_0px_0px_12px]">{item.referenceId}</td>
-                                        <td className="py-[17px] xl:py-[25px] px-[15px] xl:px-[23px]">{item.dateTime}</td>
-                                        <td className="py-[17px] xl:py-[25px] px-[15px] xl:px-[23px]">{item.description}</td>
-                                        <td className="py-[17px] xl:py-[25px] px-[15px] xl:px-[23px] font-normal">{item.amount}</td>
-                                        <td className="py-[17px] xl:py-[25px] px-[15px] xl:px-[23px] rounded-[0px_12px_12px_0px] font-normal">{item.balance}</td>
+                                        <td className="py-[10px] s18:py-[25px] px-[15px] s18:px-[23px] font-medium rounded-[12px_0px_0px_12px]">{item.referenceId}</td>
+                                        <td className="py-[10px] s18:py-[25px] px-[15px] s18:px-[23px]">{item.dateTime}</td>
+                                        <td className="py-[10px] s18:py-[25px] px-[15px] s18:px-[23px]">{item.description}</td>
+                                        <td className="py-[10px] s18:py-[25px] px-[15px] s18:px-[23px] font-normal">{item.amount}</td>
+                                        <td className="py-[10px] s18:py-[25px] px-[15px] s18:px-[23px] rounded-[0px_12px_12px_0px] font-normal">{item.balance}</td>
                                     </tr>
                                 ))}
                             </tbody>

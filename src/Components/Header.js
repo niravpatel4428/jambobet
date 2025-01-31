@@ -73,7 +73,7 @@ const Header = () => {
 
   return (
     <>
-      <section className="fixed top-0 left-0 right-0 w-full bg-[#0C2240] dark:bg-[#30435D] z-50 max-[420px]:py-[25px] max-md:py-[32px] md:py-[20px] s15:py-[35px]">
+      <section className="fixed top-0 left-0 right-0 w-full bg-[#0C2240] dark:bg-[#30435D] z-50 max-[420px]:py-[25px] py-3 s18:py-[35px]">
         <div className="flex max-xl:justify-between items-center w-full max-w-[1780px] mx-auto max-sm:px-[15px] px-[30px]">
           <div className="max-420: relative z-[100] flex max-xl:pl-[40px]">
             <Link to="/" className="inline-block">
@@ -134,37 +134,37 @@ const Header = () => {
             <ul className="flex flex-row items-center xl:gap-[18px] s16:gap-[30px] xl:mt-0 mx-auto">
               <li className="">
                 {/* Native scrolling using hash links */}
-                <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Sports Betting
                 </Link>
               </li>
               <li className="">
-                <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Live Betting
                 </Link>
               </li>
               <li className="">
-                <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   OdiLeague
                 </Link>
               </li>
               <li className="">
-                <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Casino
                 </Link>
               </li>
               <li className="">
-                <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Jackpots
                 </Link>
               </li>
               <li className="">
-                <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Livescore
                 </Link>
               </li>
               <li className="">
-                <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Promotions
                 </Link>
               </li>
@@ -173,7 +173,7 @@ const Header = () => {
               <div className="relative">
                 <input
                   type="search"
-                  className="h-full xl:w-[150px] s16:w-full xl:p-[11px_40px_11px_12px] s16:p-[11px_40px_11px_15px] rounded-[5px] bg-white dark:bg-[#4F5F75] shadow-inputshadow placeholder:text-lightblue placeholder:text-[16px] placeholder:leading-[150%] dark:placeholder:text-white dark:text-white"
+                  className="h-full xl:w-[150px] s16:w-full p-[8px_40px_8px_12px] s18:p-[11px_40px_11px_15px] rounded-[5px] bg-white dark:bg-[#4F5F75] shadow-inputshadow placeholder:text-lightblue placeholder:text-[16px] placeholder:!leading-none s18: s18:placeholder:leading-[150%] dark:placeholder:text-white dark:text-white"
                   placeholder="Search.."
                 />
                 <img
@@ -184,25 +184,25 @@ const Header = () => {
               </div>
               <Link
                 onClick={openModalRGS}
-                className="min-w-[88px] bg-yellow border border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-[11px_8px] text-[16px] leading-[150%] font-medium transition-all duration-[0.3s] hover:bg-transparent hover:border-yellow hover:text-yellow"
+                className="min-w-[88px] bg-yellow  border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-[16px] !leading-none s18:leading-[150%] font-medium transition-all duration-[0.3s] hover:bg-transparent hover:border-yellow hover:text-yellow"
                
               >
                 Join Now
               </Link>
               <Link
                 onClick={openModal}
-                className="min-w-[88px] bg-white shadow-inputshadow border border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-[11px_8px] text-[16px] leading-[150%] font-medium transition-all duration-[0.3s] dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
+                className="min-w-[88px] bg-white shadow-inputshadow  border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-[16px] !leading-none s18:leading-[150%] font-medium transition-all duration-[0.3s] dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
               >
                 Login
               </Link>
               <button
                 onClick={toggleTheme}
-                className="w-[48px] h-[50px] flex justify-center items-center p-[10px] bg-white dark:bg-blueshade rounded-[5px]"
+                className="s18:w-[48px] s18:h-[50px] flex justify-center items-center p-2 s18:p-[10px] bg-white dark:bg-blueshade rounded-[5px]"
               >
                 <img
                   src={isDarkMode ? dark : light}
                   alt={"Light Mode"}
-                  className=""
+                  className="size-5 s18:size-[26px]"
                 />
               </button>
             </div>
@@ -241,7 +241,7 @@ const Header = () => {
               <ul className="flex flex-col items-center justify-center gap-5 overflow-auto">
                 <li className="">
                   {/* Native scrolling using hash links */}
-                  <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     Sports Betting
                   </Link>
                 </li>
