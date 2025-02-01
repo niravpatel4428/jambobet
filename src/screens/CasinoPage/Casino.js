@@ -36,6 +36,8 @@ import c25 from "../../images/c25.png";
 import c26 from "../../images/c26.png";
 import c27 from "../../images/c27.png";
 import c28 from "../../images/c28.png";
+import c29 from "../../images/c29.png";
+import c30 from "../../images/c30.png";
 import fire from "../../images/fire.svg";
 import crash from "../../images/crash.svg";
 import virtuals from "../../images/virtuals.svg";
@@ -488,4 +490,6 @@ const images = [
   { src: c26, url: "/page26" },
   { src: c27, url: "/page27" },
   { src: c28, url: "/page28" },
+  { src: c29, url: "/page29" },
+  { src: c30, url: "/page30" },
 ];
