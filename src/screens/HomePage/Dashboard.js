@@ -1180,7 +1180,7 @@ const Dashboard = () => {
         </span>
       </div>
       <div className={`open-content ${isOpen ? "block" : "hidden"}`}>
-        <div className="odd-conected overflow-auto max-h-[400px] block fixed bottom-[100px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden pt-5">
+        <div className="odd-conected rounded-[7px] overflow-auto max-h-[400px] block fixed bottom-[84px] lg:bottom-[74px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden pt-5">
           <div className=" rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full">
             <div className="flex items-center rounded-[7px_7px_0px_0px] bg-darkblue dark:bg-bluedarkmode px-[15px]">
               <span className="cursor-pointer border-solid border-r-[1px] border-r-doubleextralightwhite w-[50%] flex items-center gap-[7px] p-[10px_0px] text-white text-base s18:text-lg font-medium leading-[100%]">

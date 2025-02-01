@@ -382,8 +382,8 @@ const Casino = () => {
           )}
         </span>
       </div>
-      <div className={`open-content ${isOpen ? "block" : "hidden"}`}>
-        <div className="odd-conected overflow-auto max-h-[550px] block fixed bottom-[100px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full">
+      <div className={`rounded-[7px] open-content ${isOpen ? "block" : "hidden"}`}>
+        <div className="odd-conected overflow-auto max-h-[550px] block fixed bottom-[84px] lg:bottom-[74px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full">
           <div className="bg-white dark:bg-[#24354E] rounded-md overflow-hidden">
             <div className="bg-darkblue dark:bg-[#3A4C64] grid grid-cols-2">
               <div className="p-[8px_10px] s15:p-[10px_14px] cursor-pointer flex items-center gap-2 text-sm xl:text-base s15:text-lg text-white font-medium !leading-none border-r-[1px] border-white/20">
