@@ -32,6 +32,9 @@ import "slick-carousel/slick/slick-theme.css";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
+import CustomerCare from "../../Components/CustomerCare";
+import Payroll from "../../Components/Payroll";
+import Pagination from "../../Components/Pagination";
 
 const Dashboard = () => {
   const [activeOdd, setActiveOdd] = useState(null); // Track the active odd-block
@@ -256,23 +259,6 @@ const Dashboard = () => {
     { name: "Futsal", count: 13 },
     { name: "Darts", count: 8 },
     { name: "Waterpolo", count: 8 },
-  ];
-
-  const contactInfo = [
-    {
-      id: 1,
-      icon: email, // Replace with your actual `email` icon variable
-      alt: "email",
-      link: "mailto:care@jambobet.co.de",
-      text: "care@jambobet.co.de",
-    },
-    {
-      id: 2,
-      icon: contact, // Replace with your actual `contact` icon variable
-      alt: "contact",
-      link: "tel:+254719034034",
-      text: "+254 719 034 034",
-    },
   ];
 
   const leaguesData = [
@@ -629,7 +615,7 @@ const Dashboard = () => {
     <>
       <div className="pb-[70px] s15:pb-[100px]">
         <div className="max-sm:px-[0px] px-[20px] xl:px-[30px] w-full max-w-[1780px] mx-auto">
-          <div className="grid grid-cols-12 gap-[20px]">
+          <div className="grid grid-cols-12 gap-5 md:gap-3 s18:gap-5">
             <div className="max-md:col-span-0 max-md:hidden md:col-span-3 lg:col-span-2 s15:col-span-2">
               <div className="w-full max-w-full s18:max-w-[238px]">
                 <ul className="grid grid-cols-3 place-content-between">
@@ -638,7 +624,7 @@ const Dashboard = () => {
                       <img
                         src={symbol}
                         alt={`symbol-${index + 1}`}
-                        className="border-solid border-white border-[2px] rounded-[8px] lg:h-[42px] lg:w-[42px] s15:h-[58px] s15:w-[58px] s18:h-[68px] s18:w-[68px] mx-auto"
+                        className="border-solid border-white border-[2px] rounded-[8px] lg:h-[42px] lg:w-[42px] s15:h-[58px] s15:w-[58px] s18:h-[70px] s18:w-[70px] mx-auto"
                       />
                     </li>
                   ))}
@@ -734,7 +720,7 @@ const Dashboard = () => {
                             <img
                               src={imageslider.image}
                               alt="img"
-                              className="w-full h-full object-cover rounded-[7px]"
+                              className="w-full h-full rounded-[7px]"
                             />
                           </div>
                         </div>
@@ -798,10 +784,10 @@ const Dashboard = () => {
                         {sportsData.map((sport, index) => (
                           <li
                             key={index}
-                            className="cursor-pointer flex items-center whitespace-nowrap text-mutedblue hover:text-darkblue dark:text-white hover:text-yellow dark:hover:text-yellow text-sm s18:text-base font-normal leading-[143%] transition-all duration-[0.3s]"
+                            className="cursor-pointer flex items-center whitespace-nowrap text-mutedblue hover:text-darkblue dark:text-white dark:hover:text-yellow text-sm s18:text-base font-normal leading-[143%] transition-all duration-[0.3s]"
                           >
                             {sport.name}
-                            <span className="pt-[2px] min-w-[33px] min-h-[20px] ml-[5px] rounded-[23px] bg-yellow flex justify-center items-center text-white text-sm font-medium leading-[128%]">
+                            <span className="pt-[2px] min-w-[33px] min-h-[20px] ml-[5px] rounded-[23px] bg-yellow flex justify-center items-center text-white text-sm font-medium leading-[128%] last:mr-3b">
                               {sport.count}
                             </span>
                           </li>
@@ -812,7 +798,7 @@ const Dashboard = () => {
                   {/* leage / 1*2 / double chance header */}
                   <div className="scrollable">
                     <div className="max-lg:min-w-[732px] flex items-center justify-between max-sm:p-[20px] py-3 px-5 s18:p-[15px_23px]">
-                      <select class="rounded-[6px] bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[247px] border-none outline-none text-[#6B7280] dark:text-white text-sm font-normal leading-[114%] appearance-none">
+                      <select className="rounded-[6px] bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[247px] border-none outline-none text-[#6B7280] dark:text-white text-sm font-normal leading-[114%] appearance-none">
                         <option value="" selected className="">
                           Sort by league
                         </option>
@@ -826,7 +812,7 @@ const Dashboard = () => {
                       <span className="text-[#6B7280] dark:text-white text-sm font-normal leading-[128%]">
                         Double chance
                       </span>
-                      <select class="rounded-[6px] bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[213px] border-none outline-none text-[#6B7280] dark:text-white text-sm font-normal leading-[114%] appearance-none">
+                      <select className="rounded-[6px] bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[213px] border-none outline-none text-[#6B7280] dark:text-white text-sm font-normal leading-[114%] appearance-none">
                         <option value="" selected className="">
                           GG/NG
                         </option>
@@ -917,7 +903,7 @@ const Dashboard = () => {
                                                 className="w-1/2"
                                               >
                                                 <div
-                                                  className={`odd-block cursor-pointer rounded-[6px] w-full py-3 md:py-2 s18:py-3 flex flex-col gap-[4px] border items-center justify-center 
+                                                  className={`odd-block cursor-pointer rounded-[6px] w-full py-3 md:py-2 s18:py-3  flex flex-col gap-[4px] border items-center justify-center 
                                                         ${
                                                           isSelected
                                                             ? "dark:bg-[#E2E2E2] bg-yellow  text-black  border-yellow"
@@ -929,14 +915,28 @@ const Dashboard = () => {
                                                   }
                                                 >
                                                   <span
-                                                    className={`${ odd.highlight ? "flex items-center gap-[1px]" : "" } ${ isSelected ? "!text-#A3A3A3 dark:!text-darkblue" : "" }  text-[#A3A3A3] dark:text-extralightwhite text-[12px] font-normal leading-[150%] md:leading-tight s18:leading-[150%]`}
+                                                    className={`${
+                                                      odd.highlight
+                                                        ? "flex items-center gap-[1px]"
+                                                        : ""
+                                                    } ${
+                                                      isSelected
+                                                        ? "!text-#A3A3A3 dark:!text-darkblue"
+                                                        : ""
+                                                    }  text-[#A3A3A3] dark:text-extralightwhite text-[12px] font-normal leading-[150%] md:leading-tight s18:leading-[150%]`}
                                                   >
                                                     {odd.label}
                                                     {odd.highlight && (
                                                       <span className="ml-[2px] mb-[1px] w-0 h-0 border-b-[9px] border-b-[#11A306] border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent"></span>
                                                     )}
                                                   </span>
-                                                  <span className={`${ isSelected ? "!text-[#374151] dark:!text-darkblue" : "" } text-mutedblue dark:text-white text-sm s18:text-base font-medium leading-[150%] md:leading-tight s18:leading-[150%]`}>
+                                                  <span
+                                                    className={`${
+                                                      isSelected
+                                                        ? "!text-[#374151] dark:!text-darkblue"
+                                                        : ""
+                                                    } text-mutedblue dark:text-white text-sm s18:text-base font-medium leading-[150%] md:leading-tight s18:leading-[150%]`}
+                                                  >
                                                     {odd.value}
                                                   </span>
                                                 </div>
@@ -957,6 +957,8 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
+              {/* Pagination */}
+              <Pagination />
             </div>
             <div className="col-span-0 hidden s15:block s15:col-span-3">
               <div className="odd-conected rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full">
@@ -1143,60 +1145,33 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="rounded-[7px] bg-white dark:bg-[#243853] mt-3 s18:mt-[20px]">
-                <h3 className="p-3 s18:p-5 text-center text-darkblue dark:text-white text-sm md:text-base s18:text-[18px] font-medium leading-[100%] rounded-[7px_7px_0px_0px] border border-solid border-lightblack dark:border-lightwhiteborder bg-extralightblack dark:bg-[#3A4B62]">
-                  Payroll Number 290898
-                </h3>
-                <div className="flex flex-col s16:flex-row justify-center gap-[30px] items-center p-[12px_20px] s16:p-[16px_28px]  s18:p-[20px_35px]">
-                  <img src={safari} alt="safari" />
-                  <img src={airtel} alt="airtel" />
-                </div>
+              <div>
+                {" "}
+                <Payroll />{" "}
               </div>
-              <div className="rounded-[7px] bg-white dark:bg-[#243853] mt-3 s18:mt-[20px]">
-                <h3 className="p-3 s18:p-5 text-center text-darkblue dark:text-white text-sm md:text-base s18:text-[18px] font-medium leading-[100%] rounded-[7px_7px_0px_0px] border border-solid border-lightblack dark:border-lightwhiteborder bg-extralightblack dark:bg-[#3A4B62]">
-                  Customer Care
-                </h3>
-                <div className="p-[12px_20px] s16:p-[16px_28px] s18:p-[15px_35px]">
-                  <p className="text-center text-darkblue dark:text-white text-sm font-normal leading-[128%]">
-                    We offer 24/7 customer care attention to Jambobet players
-                  </p>
-                  <ul className="flex flex-col gap-[12px] mt-3 s18:mt-5">
-                    {contactInfo.map((item) => (
-                      <li
-                        key={item.id}
-                        className="flex flex-col items-center gap-[5px] s18;gap-[9px]"
-                      >
-                        <img src={item.icon} alt={item.alt} />
-                        <Link
-                          to={item.link}
-                          className="text-darkblue dark:text-white hover:text-yellow dark:hover:text-yellow transition-all duration-[0.3s] text-sm s18:text-[18px] font-normal leading-[100%]"
-                        >
-                          {item.text}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div>
+                {" "}
+                <CustomerCare />{" "}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="s15:hidden flex justify-center items-center fixed bottom-0 z-[9] left-[50%] translate-x-[-50%] w-full max-w-[428px] mx-auto rounded-[20px_20px_0px_0px] bg-[#2F425C] p-[24px_15px_12px] s18:p-[40px_15px_25px]">
+      <div className="s15:hidden flex justify-center items-center fixed bottom-0 z-[9] left-[50%] translate-x-[-50%] w-full max-w-[428px] mx-auto rounded-[20px_20px_0px_0px] bg-[#2F425C] p-[30px_15px_12px] lg:p-[24px_15px_12px] s18:p-[40px_15px_25px]">
         <span
           className="select-none cursor-pointer border-solid  inline-flex flex-col items-center gap-[7px] p-[0px] text-white text-lg md:text-sm s18:text-[18px] font-medium leading-[100%]"
           onClick={handleToggles}
         >
           {isOpen ? (
             <>
-              <span className="absolute -top-4 s18:top-[-22px] left-[50%] translate-x-[-50%] flex w-8 h-8 max-md:w-[50px] max-md:h-[50px] justify-center items-center bg-yellow rounded-[50%] text-black dark:bg-white text-[22px] md:text-abse s16:text-lg max-md:text-[22px] font-medium leading-[100%]">
+              <span className="absolute -top-[20px] lg:-top-4 s18:top-[-22px] left-[50%] translate-x-[-50%] flex w-8 h-8 max-md:w-[38px] max-md:h-[38px] justify-center items-center bg-yellow rounded-[50%] text-black dark:bg-white text-[22px] md:text-abse s16:text-lg max-md:text-[22px] font-medium leading-[100%]">
                 <img src={close} alt="Close" className="w-[14px] h-[14px]" />
               </span>
               Close
             </>
           ) : (
             <>
-              <span className="absolute -top-4 s18:top-[-22px] left-[50%] translate-x-[-50%] flex w-8 h-8 max-md:w-[50px] max-md:h-[50px] justify-center items-center bg-yellow rounded-[50%] text-black dark:bg-white text-[22px] md:text-abse s16:text-lg max-md:text-[22px] font-medium leading-[100%]">
+              <span className="absolute -top-[20px] lg:-top-4 s18:top-[-22px] left-[50%] translate-x-[-50%] flex w-8 h-8 max-md:w-[38px] max-md:h-[38px] justify-center items-center bg-yellow rounded-[50%] text-black dark:bg-white text-[22px] md:text-abse s16:text-lg max-md:text-[22px] font-medium leading-[100%]">
                 1
               </span>
               Betslip
@@ -1205,186 +1180,188 @@ const Dashboard = () => {
         </span>
       </div>
       <div className={`open-content ${isOpen ? "block" : "hidden"}`}>
-        <div className="odd-conected overflow-auto max-h-[400px] block fixed bottom-[120px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full">
-          <div className="flex items-center rounded-[7px_7px_0px_0px] bg-darkblue dark:bg-bluedarkmode px-[15px]">
-            <span className="cursor-pointer border-solid border-r-[1px] border-r-doubleextralightwhite w-[50%] flex items-center gap-[7px] p-[10px_0px] text-white text-[18px] font-medium leading-[100%]">
-              <span className="flex w-[32px] h-[32px] justify-center items-center bg-yellow rounded-[50%] text-black text-[19px] font-medium leading-[100%]">
-                1
-              </span>{" "}
-              Betslip
-            </span>
-            <span className="show-content cursor-pointer w-[50%] flex justify-center items-center p-[10px_0px] text-white text-[18px] font-medium leading-[100%]">
-              My bets
-            </span>
-          </div>
-          <div>
-            <span className="cursor-pointer border-solid border-b-[2px] border-b-extrathinblack dark:border-b-lightwhiteborder flex p-[12px] bg-extralightblack dark:bg-[#2F4058] items-center gap-[12px] text-[#EF4444] text-sm font-medium leading-[128%]">
-              <img src={remove} alt="remove" />
-              Remove all
-            </span>
-            <div className="flex justify-between p-[15px_15px_10px] border-solid border-b-[2px] border-b-extrathinblack dark:border-b-lightwhiteborder">
-              <div className="flex gap-[12px] items-start">
-                <img
-                  src={isDarkMode ? darkremove : grayremove}
-                  alt="remove"
-                  className="cursor-pointer mt-[3px]"
-                />
-                <div className="flex flex-col gap-[5px] cursor-pointer">
-                  <p className="text-darkblue dark:text-white text-base font-medium leading-[125%]">
-                    Everton FC
-                  </p>
-                  <p className="text-[#757575] dark:text-white text-base font-normal leading-[125%]">
-                    1x2
-                  </p>
-                  <p className="text-[#757575] dark:text-white text-sm font-normal leading-[125%]">
-                    Evrrton FC - Aston Villa
-                  </p>
-                  <p className="text-[#757575] dark:text-white text-sm font-normal leading-[125%]">
-                    15/01 22:30
-                  </p>
-                </div>
-              </div>
-              <span className="h-full rounded-[6px] flex justify-center items-center bg-lightyellow dark:bg-yellow dark:text-darkblue p-[5px_9px] text-darkblue text-base font-semibold leading-[125%]">
-                3.50
+        <div className="odd-conected overflow-auto max-h-[400px] block fixed bottom-[100px] z-[9] max-w-[428px] mx-auto left-[50%] translate-x-[-50%] s15:hidden pt-5">
+          <div className=" rounded-[7px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow w-full">
+            <div className="flex items-center rounded-[7px_7px_0px_0px] bg-darkblue dark:bg-bluedarkmode px-[15px]">
+              <span className="cursor-pointer border-solid border-r-[1px] border-r-doubleextralightwhite w-[50%] flex items-center gap-[7px] p-[10px_0px] text-white text-base s18:text-lg font-medium leading-[100%]">
+                <span className="flex w-[32px] h-[32px] justify-center items-center bg-yellow rounded-[50%] text-black text-base s18:text-lg font-medium leading-[100%]">
+                  1
+                </span>{" "}
+                Betslip
+              </span>
+              <span className="show-content cursor-pointer w-[50%] flex justify-center items-center p-[10px_0px] text-white text-base s18:text-lg font-medium leading-[100%]">
+                My bets
               </span>
             </div>
-            <div className="p-[15px_15px_0px]">
-              <span className="text-[#EF4444] text-base font-medium leading-[112%]">
-                Stake
+            <div>
+              <span className="cursor-pointer border-solid border-b-[2px] border-b-extrathinblack dark:border-b-lightwhiteborder flex p-[12px] bg-extralightblack dark:bg-[#2F4058] items-center gap-[12px] text-[#EF4444] text-sm font-medium leading-[128%]">
+                <img src={remove} alt="remove" />
+                Remove all
               </span>
-              <div className="flex gap-[5px] mt-[5px]">
-                <span className="cursor-pointer p-[12px_14px] w-[58px] h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
-                  20/-
-                </span>
-                <span className="cursor-pointer p-[12px_14px] w-[58px] h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
-                  50/-
-                </span>
-                <span className="cursor-pointer p-[12px_14px] w-[58px] h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
-                  100/-
-                </span>
-                <span className="cursor-pointer p-[12px_14px] w-[58px] h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
-                  500/-
-                </span>
-                <span className="flex justify-end p-[12px_14px] items-center w-full h-[43px] rounded-[6px] border-solid border-bordercolor bg-darkblue text-[18px] text-white font-normal font-semibold leading-[120%] dark:text-yellow dark:border dark:border-solid dark:bg-[#3A495F] dark:border-doubleextralightwhite">
-                  50
-                </span>
-              </div>
-              <div className="p-[15px_0px] flex flex-col gap-[10px]">
-                <p className="flex justify-between items-center text-darkblue dark:text-white text-base font-normal leading-[112%]">
-                  Total Odds{" "}
-                  <span className="text-darkblue dark:text-white text-base font-semibold leading-[125%]">
-                    3.50
-                  </span>
-                </p>
-                <p className="flex justify-between items-center text-darkblue dark:text-white text-base font-normal leading-[112%]">
-                  Possible Win{" "}
-                  <span className="flex gap-[5px] text-darkblue dark:text-white text-base font-semibold leading-[125%]">
-                    <span className="text-base text-thinblack dark:text-extralightwhite font-semibold leading-[125%]">
-                      KShs.
-                    </span>{" "}
-                    139.53
-                  </span>
-                </p>
-                <p className="flex justify-between items-center text-darkblue dark:text-white text-base font-normal leading-[112%]">
-                  Amount(KShs){" "}
-                  <span className="flex gap-[5px] text-darkblue dark:text-white text-base font-semibold leading-[125%]">
-                    <span className="text-base text-thinblack font-semibold leading-[125%] dark:text-extralightwhite">
-                      KShs.
-                    </span>{" "}
-                    86.53
-                  </span>
-                </p>
-                <p className="flex justify-between items-center text-darkblue dark:text-white text-base font-normal leading-[112%]">
-                  15% Excise Tax{" "}
-                  <span className="flex gap-[5px] text-darkblue dark:text-white text-base font-semibold leading-[125%]">
-                    <span className="text-base text-thinblack font-semibold leading-[125%] dark:text-extralightwhite">
-                      KShs.
-                    </span>{" "}
-                    13.04
-                  </span>
-                </p>
-              </div>
-              <div className="rounded-[0px_0px_7px_7px] bg-bglightblue dark:bg-[#2F425C] p-[15px_15px_20px] flex flex-col gap-[10px] mx-[-15px]">
-                <p className="flex justify-between items-center text-darkblue dark:text-white text-base font-normal leading-[112%]">
-                  Win{" "}
-                  <span className="text-darkblue dark:text-white text-base font-semibold leading-[125%]">
-                    <span className="text-base text-thinblack dark:text-extralightwhite font-semibold leading-[125%]">
-                      KShs.
-                    </span>{" "}
-                    130.04
-                  </span>
-                </p>
-                <p className="flex justify-between items-center text-darkblue dark:text-white text-base font-normal leading-[112%]">
-                  20% Withholding Tax{" "}
-                  <span className="flex gap-[5px] text-darkblue dark:text-white text-base font-semibold leading-[125%]">
-                    <span className="text-base text-thinblack dark:text-extralightwhite font-semibold leading-[125%]">
-                      KShs.
-                    </span>{" "}
-                    13.04
-                  </span>
-                </p>
-                <p className="flex justify-between items-center text-darkblue dark:text-white text-base font-normal leading-[112%]">
-                  Possible Payout{" "}
-                  <span className="flex gap-[5px] text-darkblue dark:text-white text-base font-semibold leading-[125%]">
-                    <span className="text-base text-thinblack font-semibold leading-[125%] dark:text-extralightwhite">
-                      KShs.
-                    </span>{" "}
-                    133.04
-                  </span>
-                </p>
-                <div className="flex justify-between items-center mt-[40px]">
-                  <label className="flex items-center text-sm font-normal leading-[128%] text-thinblack dark:text-extralightwhite select-none">
-                    <input
-                      type="checkbox"
-                      className="hidden peer"
-                      checked={isChecked}
-                      onChange={handleCheckboxChange}
-                    />
-                    <span className="mr-[9px] w-[18px] h-[18px] rounded-[2px] border-[1px] bg-transparent border-solid border-[#A3A3A3] peer-checked:bg-green-600 peer-checked:border-green-600 flex justify-center items-center">
-                      {/* Always show an icon */}
-                      {isChecked ? (
-                        <FontAwesomeIcon
-                          icon={faCheck}
-                          className="text-white ml-[1px] font-bold opacity-100"
-                        />
-                      ) : (
-                        <FontAwesomeIcon
-                          icon={faCheck}
-                          className="text-gray-400 opacity-0"
-                        />
-                      )}
-                    </span>
-                    Accept odd changes
-                  </label>
-                  <div className="flex items-center gap-[9px]">
-                    {/* Toggle Switch */}
-                    <div
-                      onClick={handleToggle}
-                      className={`relative w-[30px] h-[20px] flex items-center rounded-[11px] cursor-pointer ${
-                        isToggled ? "bg-[#11A306]" : "bg-[#A3A3A3]"
-                      }`}
-                    >
-                      <div
-                        className={`w-[14px] h-[14px] bg-white rounded-[11px] transform transition-transform ${
-                          isToggled ? "translate-x-3" : "translate-x-1"
-                        }`}
-                      ></div>
-                    </div>
-                    <span className="text-sm  text-thinblack font-medium leading-[128%] dark:text-extralightwhite">
-                      Keep betslip
-                    </span>
+              <div className="flex justify-between p-[15px_12px_10px] border-solid border-b-[2px] border-b-extrathinblack dark:border-b-lightwhiteborder">
+                <div className="flex gap-[12px] items-start">
+                  <img
+                    src={isDarkMode ? darkremove : grayremove}
+                    alt="remove"
+                    className="cursor-pointer mt-[3px]"
+                  />
+                  <div className="flex flex-col gap-[5px] cursor-pointer">
+                    <p className="text-darkblue dark:text-white text-sm max-[1439px]:text-base font-medium leading-[125%]">
+                      Everton FC
+                    </p>
+                    <p className="text-[#757575] dark:text-white text-sm max-[1439px]:text-base font-normal leading-[125%]">
+                      1x2
+                    </p>
+                    <p className="text-[#757575] dark:text-white text-xs xl:text-sm font-normal leading-[125%]">
+                      Evrrton FC - Aston Villa
+                    </p>
+                    <p className="text-[#757575] dark:text-white text-xs xl:text-sm font-normal leading-[125%]">
+                      15/01 22:30
+                    </p>
                   </div>
                 </div>
-                <div className="flex gap-[9px] mt-[15px] md:mt-3 s18:mt-[15px]">
-                  <Link
-                    to="/"
-                    className="inline-flex bg-darkblue text-yellow border-[2px] border-solid border-darkblue dark:border-white hover:bg-transparent hover:bg-transparent dark:hover:bg-transparent dark:hover:text-white hover:text-darkblue transition-all duration-[0.3s] dark:bg-white rounded-[7px] dark:text-darkblue p-[16px_17px] md:p-[10px_14px] s18:p-[16px_17px] text-[18px] font-medium leading-[111%]"
-                  >
-                    Share
-                  </Link>
-                  <span className="rounded-[7px] flex justify-center items-center w-full bg-yellow p-[15px] md:p-[10px_14px] s18:p-[15px] text-darkblue text-[18px] font-medium leading-[111%]">
-                    Place Bet KShs. <span>133.04</span>
+                <span className="h-full rounded-[6px] flex justify-center items-center bg-lightyellow dark:bg-yellow dark:text-darkblue p-[5px_9px] text-darkblue text-sm max-[1439px]:text-base font-semibold leading-[125%]">
+                  3.50
+                </span>
+              </div>
+              <div className="p-[15px_15px_0px]">
+                <span className="text-[#EF4444] text-sm max-[1439px]:text-base font-medium leading-[112%]">
+                  Stake
+                </span>
+                <div className="flex gap-[5px] mt-[5px]">
+                  <span className="cursor-pointer p-[8px_10px] max-[1439px]:p-[12px_14px] max-[1439px]:w-[58px] max-[1439px]:h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-sm max-[1439px]:text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
+                    20/-
                   </span>
+                  <span className="cursor-pointer p-[8px_10px] max-[1439px]:p-[12px_14px] max-[1439px]:w-[58px] max-[1439px]:h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-sm max-[1439px]:text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
+                    50/-
+                  </span>
+                  <span className="cursor-pointer p-[8px_10px] max-[1439px]:p-[12px_14px] max-[1439px]:w-[58px] max-[1439px]:h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-sm max-[1439px]:text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
+                    100/-
+                  </span>
+                  <span className="cursor-pointer p-[8px_10px] max-[1439px]:p-[12px_14px] max-[1439px]:w-[58px] max-[1439px]:h-[43px] flex justify-center items-center rounded-[6px] bg-extralightblack border border-solid border-lightblack text-black text-sm max-[1439px]:text-base font-medium leading-[112%] hover:bg-yellow hover:border-bordercolor transition-all duration-[0.3s] dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
+                    500/-
+                  </span>
+                  <span className="flex justify-end p-[12px_14px] items-center w-full h-[43px] rounded-[6px] border-solid border-bordercolor bg-darkblue text-[18px] text-white font-normal font-semibold leading-[120%] dark:text-yellow dark:border dark:border-solid dark:bg-[#3A495F] dark:border-doubleextralightwhite">
+                    50
+                  </span>
+                </div>
+                <div className="p-[15px_0px] flex flex-col gap-[10px]">
+                  <p className="flex justify-between items-center text-darkblue dark:text-white text-sm max-[1439px]:text-base font-normal leading-[112%]">
+                    Total Odds{" "}
+                    <span className="text-darkblue dark:text-white text-sm max-[1439px]:text-base font-semibold leading-[125%]">
+                      3.50
+                    </span>
+                  </p>
+                  <p className="flex justify-between items-center text-darkblue dark:text-white text-sm max-[1439px]:text-base font-normal leading-[112%]">
+                    Possible Win{" "}
+                    <span className="flex gap-[5px] text-darkblue dark:text-white text-sm max-[1439px]:text-base font-semibold leading-[125%]">
+                      <span className="text-sm max-[1439px]:text-base text-thinblack dark:text-extralightwhite font-semibold leading-[125%]">
+                        KShs.
+                      </span>{" "}
+                      139.53
+                    </span>
+                  </p>
+                  <p className="flex justify-between items-center text-darkblue dark:text-white text-sm max-[1439px]:text-base font-normal leading-[112%]">
+                    Amount(KShs){" "}
+                    <span className="flex gap-[5px] text-darkblue dark:text-white text-sm max-[1439px]:text-base font-semibold leading-[125%]">
+                      <span className="text-sm max-[1439px]:text-base text-thinblack font-semibold leading-[125%] dark:text-extralightwhite">
+                        KShs.
+                      </span>{" "}
+                      86.53
+                    </span>
+                  </p>
+                  <p className="flex justify-between items-center text-darkblue dark:text-white text-sm max-[1439px]:text-base font-normal leading-[112%]">
+                    15% Excise Tax{" "}
+                    <span className="flex gap-[5px] text-darkblue dark:text-white text-sm max-[1439px]:text-base font-semibold leading-[125%]">
+                      <span className="text-sm max-[1439px]:text-base text-thinblack font-semibold leading-[125%] dark:text-extralightwhite">
+                        KShs.
+                      </span>{" "}
+                      13.04
+                    </span>
+                  </p>
+                </div>
+                <div className="rounded-[0px_0px_7px_7px] bg-bglightblue dark:bg-[#2F425C] p-[15px_15px_20px] flex flex-col gap-[10px] mx-[-15px]">
+                  <p className="flex justify-between items-center text-darkblue dark:text-white text-sm max-[1439px]:text-base font-normal leading-[112%]">
+                    Win{" "}
+                    <span className="text-darkblue dark:text-white text-sm max-[1439px]:text-base font-semibold leading-[125%]">
+                      <span className="text-sm max-[1439px]:text-base text-thinblack dark:text-extralightwhite font-semibold leading-[125%]">
+                        KShs.
+                      </span>{" "}
+                      130.04
+                    </span>
+                  </p>
+                  <p className="flex justify-between items-center text-darkblue dark:text-white text-sm max-[1439px]:text-base font-normal leading-[112%]">
+                    20% Withholding Tax{" "}
+                    <span className="flex gap-[5px] text-darkblue dark:text-white text-sm max-[1439px]:text-base font-semibold leading-[125%]">
+                      <span className="text-sm max-[1439px]:text-base text-thinblack dark:text-extralightwhite font-semibold leading-[125%]">
+                        KShs.
+                      </span>{" "}
+                      13.04
+                    </span>
+                  </p>
+                  <p className="flex justify-between items-center text-darkblue dark:text-white text-sm max-[1439px]:text-base font-normal leading-[112%]">
+                    Possible Payout{" "}
+                    <span className="flex gap-[5px] text-darkblue dark:text-white text-base font-semibold leading-[125%]">
+                      <span className="text-sm max-[1439px]:text-base text-thinblack font-semibold leading-[125%] dark:text-extralightwhite">
+                        KShs.
+                      </span>{" "}
+                      133.04
+                    </span>
+                  </p>
+                  <div className="flex justify-between items-center mt-4 max-[1439px]:mt-[40px]">
+                    <label className="flex items-center text-xs max-[1439px]:text-sm font-normal leading-[128%] text-thinblack dark:text-extralightwhite select-none">
+                      <input
+                        type="checkbox"
+                        className="hidden peer"
+                        checked={isChecked}
+                        onChange={handleCheckboxChange}
+                      />
+                      <span className="mr-[9px] -mt-[2px] max-[1439px]:mt-0 w-3 max-[1439px]:w-[18px] h-3 max-[1439px]:h-[18px] rounded-[2px] border-[1px] bg-transparent border-solid border-[#A3A3A3] peer-checked:bg-green-600 peer-checked:border-green-600 flex justify-center items-center">
+                        {/* Always show an icon */}
+                        {isChecked ? (
+                          <FontAwesomeIcon
+                            icon={faCheck}
+                            className="text-white ml-[1px] font-bold opacity-100"
+                          />
+                        ) : (
+                          <FontAwesomeIcon
+                            icon={faCheck}
+                            className="text-gray-400 opacity-0"
+                          />
+                        )}
+                      </span>
+                      Accept odd changes
+                    </label>
+                    <div className="flex items-center gap-[9px]">
+                      {/* Toggle Switch */}
+                      <div
+                        onClick={handleToggle}
+                        className={`relative w-7 h-4 max-[1439px]:w-[30px] max-[1439px]:h-[20px] flex items-center rounded-[11px] cursor-pointer ${
+                          isToggled ? "bg-[#11A306]" : "bg-[#A3A3A3]"
+                        }`}
+                      >
+                        <div
+                          className={`w-[12px] h-[12px] max-[1439px]:w-[14px] max-[1439px]:h-[14px] bg-white rounded-[11px] transform transition-transform ${
+                            isToggled ? "translate-x-3" : "translate-x-1"
+                          }`}
+                        ></div>
+                      </div>
+                      <span className="text-xs max-[1439px]:text-sm text-thinblack font-medium leading-[128%] dark:text-extralightwhite">
+                        Keep betslip
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flex gap-[9px] mt-[15px] md:mt-3 s18:mt-[15px]">
+                    <Link
+                      to="/"
+                      className="inline-flex bg-darkblue text-yellow border-[2px] border-solid border-darkblue dark:border-white hover:bg-transparent hover:bg-transparent dark:hover:bg-transparent dark:hover:text-white hover:text-darkblue transition-all duration-[0.3s] dark:bg-white rounded-[7px] dark:text-darkblue p-[16px_17px] md:p-[10px_14px] s18:p-[16px_17px] text-sm font-medium leading-[111%]"
+                    >
+                      Share
+                    </Link>
+                    <span className="rounded-[7px] flex justify-center items-center w-full bg-yellow p-[15px] md:p-[10px_14px] s18:p-[15px] text-darkblue text-sm font-medium leading-[111%]">
+                      Place Bet KShs. <span>133.04</span>
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

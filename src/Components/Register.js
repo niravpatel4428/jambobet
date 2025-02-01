@@ -15,9 +15,9 @@ const Register = ({ isOpen, onClose }) => {
       role="dialog"
       aria-modal="true"
     >
-      <div className="h-full w-full overflow-y-auto flex justify-center items-center">
+      <div className="h-full w-full overflow-y-auto flex justify-center items-center pt-10 mb-5">
         <div
-          className="relative w-full max-w-[541px] animate-fade-in"
+          className="relative w-full h-full max-w-[541px] animate-fade-in"
           tabIndex={0}
         >
           <div className="px-[15px]">
@@ -49,18 +49,18 @@ const Register = ({ isOpen, onClose }) => {
                     >
                       Phone Number
                     </label>
-                    <div className="relative after:absolute after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-[18px] after:left-8 s18:after:left-[41px] after:content-[''] after:bg-black/20">
+                    <div className="relative after:absolute after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-[18px] after:left-[38px] s18:after:left-[41px] after:content-[''] after:bg-black/20">
                       <input
                         type="text"
                         id="phone"
                         placeholder="Phone Number"
-                        className="block w-full py-2 px-10 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-none text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
+                        className="block w-full py-2 px-12 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-normal s18:!leading-normal s18:text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
                       />
                       <span className="absolute inset-y-0 left-0 pl-3 pr-[10px] flex items-center pointer-events-none">
                         <img
                           src={userForm}
                           alt="user"
-                          className="object-contain w-3 xl:w-4 s16:w-6"
+                          className="object-contain w-3 xl:w-4 s16:w-4"
                         />
                       </span>
                     </div>
@@ -74,18 +74,26 @@ const Register = ({ isOpen, onClose }) => {
                     >
                       Password
                     </label>
-                    <div className="relative after:absolute after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-[18px] after:left-8 s18:after:left-[41px] after:content-[''] after:bg-black/20">
+                    <div className="relative after:absolute after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-[18px] after:left-[38px] s18:after:left-[41px] after:content-[''] after:bg-black/20">
                       <input
                         type="password"
                         id="password"
                         placeholder="Password"
-                        className="block w-full py-2 px-10 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-none text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
+                        className="block w-full py-2 px-12 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-normal s18:!leading-normal s18:text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
                       />
                       <span className="absolute inset-y-0 left-0 pl-3 pr-[10px] flex items-center pointer-events-none">
-                        <img src={lock} alt="lock" className="object-contain w-3 xl:w-4 s16:w-6" />
+                        <img
+                          src={lock}
+                          alt="lock"
+                          className="object-contain w-3 xl:w-4 s16:w-4"
+                        />
                       </span>
                       <span className="absolute top-1/2 -translate-y-1/2 right-[10px]">
-                        <img src={eye} alt="eye" className="object-contain w-3 xl:w-4 s16:w-6 " />
+                        <img
+                          src={eye}
+                          alt="eye"
+                          className="object-contain w-3 xl:w-4 s16:w-4 "
+                        />
                       </span>
                     </div>
                   </div>
@@ -98,19 +106,23 @@ const Register = ({ isOpen, onClose }) => {
                     >
                       Confirm Password
                     </label>
-                    <div className="relative after:absolute after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-[18px] after:left-8 s18:after:left-[41px] after:content-[''] after:bg-black/20">
+                    <div className="relative after:absolute after:top-1/2 after:-translate-y-1/2 after:w-[1px] after:h-[18px] after:left-[38px] s18:after:left-[41px] after:content-[''] after:bg-black/20">
                       <input
                         type="password"
                         id="confirmPassword"
                         placeholder="Confirm Password"
-                        className="block w-full py-2 px-10 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-none text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
+                        className="block w-full py-2 px-12 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-normal s18:!leading-normal s18:text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
                       />
                       <span className="absolute inset-y-0 left-0 pl-3 pr-[10px] flex items-center pointer-events-none">
-                        <img src={lock} alt="lock" className="object-contain w-3 xl:w-4 s16:w-6" />
+                        <img
+                          src={lock}
+                          alt="lock"
+                          className="object-contain w-3 xl:w-4 s16:w-4"
+                        />
                       </span>
-                      <span className="absolute top-1/2 -translate-y-1/2 right-[10px]">
-                        <img src={eye} alt="eye" className="object-contain w-3 xl:w-4 s16:w-6 " />
-                      </span>
+                      {/* <span className="absolute top-1/2 -translate-y-1/2 right-[10px]">
+                        <img src={eye} alt="eye" className="object-contain w-3 xl:w-4 s16:w-4 " />
+                      </span> */}
                     </div>
                   </div>
 
@@ -127,13 +139,13 @@ const Register = ({ isOpen, onClose }) => {
                         type="text"
                         id="referralCode"
                         placeholder="Referral Code"
-                        className="block w-full py-2 px-10 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-none text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
+                        className="block w-full py-2 px-12 s18:p-[13px_52px_13px_52px] bg-[#0000000c] border border-[#00000033] rounded-md focus:outline-none !leading-normal s18:!leading-normal s18:text-dark text-base s18:text-lg font-normal placeholder:text-[#9599A1] placeholder:text-base s18:placeholder:text-lg"
                       />
                       <span className="absolute inset-y-0 left-0 pl-3 pr-[10px] flex items-center pointer-events-none">
                         <img
                           src={referral}
                           alt="referral"
-                          className="object-contain w-3 xl:w-4 s16:w-6"
+                          className="object-contain w-3 xl:w-4 s16:w-4"
                         />
                       </span>
                     </div>

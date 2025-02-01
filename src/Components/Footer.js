@@ -15,11 +15,11 @@ const Footer = () => {
   return (
     <div className="relative bg-darkblue dark:bg-[#182D4A] pb-[120px] s15:pb-[0px]">
       <div className="w-full max-w-[1565px] px-5 mx-auto">
-        <div className="pt-[50px] xl:pt-10 s18:pt-[50px] pb-[30px] md:pb-8 xl:pb-12 2xl:pb-[101px] flex max-sm:flex-col sm:flex-wrap lg:flex-nowrap justify-center gap-[50px] sm:gap-10 xl:gap-28 2xl:gap-[180px]">
+        <div className="pt-[50px] lg:pt-10 s18:pt-[50px] pb-[30px] md:pb-10 xl:pb-12 2xl:pb-[101px] flex max-sm:flex-col sm:flex-wrap lg:flex-nowrap justify-center gap-[50px] sm:gap-10 xl:gap-28 2xl:gap-[180px]">
           <div className="w-full sm:w-[45%] lg:max-w-[200px] xl:max-w-[240px]">
-            <div className="h-9 lg:h-[43px] mb-10 flex justify-center sm:justify-start">
+            <Link to="/" className="h-9 lg:h-[43px] mb-10 flex justify-center sm:justify-start">
               <img src={logo} alt="logo" className="w-fit h-full object-contain lg:w-[150px] s16:w-[180px] s18:w-auto" />
-            </div>
+            </Link>
             <div className="flex flex-col gap-5 md:gap-3 s18:gap-5">
               <div className="flex flex-col max-sm:items-center max-sm:w-fit max-sm:mx-auto sm:flex-row gap-[10px] sm:gap-3 text-white hover:text-yellow text-sm font-normal transition-all dura">
                 <img

@@ -162,12 +162,12 @@ const Slidersection = () => {
     };
 
     return (
-        <div className="max-[420px]:overflow-hidden image-slider max-[420px]:pt-[80px] max-md:pt-[104px] md:pt-[90px] xl:pt-[60px] s18:pt-[120px] relative max-sm:px-[15px] px-[20px] max-sm:mb-[10px] mb-[20px] mt-[-1px]">
+        <div className="max-[420px]:overflow-hidden image-slider max-[420px]:pt-[80px] max-md:pt-[65px] md:pt-[75px] xl:pt-[60px] s18:pt-[120px] relative max-sm:px-[15px] px-[20px] max-sm:mb-[10px] mb-[20px] mt-[-1px]">
             <div className="p-[15px_20px_15px_20px] sm:p-3 s15:p-4 s18:p-[21px_20px_20px_20px] border border-solid rounded-[0px_0px_20px_20px] dark:bg-[#182D4A] bg-lightyellow shadow-inputshadow border-yellow dark:border-[#5D6C80]">
                 <div className="max-[575px]:justify-center max-md:ml-[0px] max-lg:p-[0px] p-[0px_0px_0px_18px] grid grid-cols-12 gap-[35px] items-center">
                     <div className="max-[575px]:hidden max-[575px]:col-span-0 col-span-1">
                         <button
-                            className="max-[575px]:hidden ml-auto custom-arrow custom-prev flex justify-center items-center max-xl:p-[16px] max-md:p-[10px] max-md:w-[32px] max-md:h-[32px] md:w-[45px] md:h-[45px] w-[48px] h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
+                            className="max-[575px]:hidden ml-auto custom-arrow custom-prev flex justify-center items-center  max-md:w-[32px] max-md:h-[32px] md:w-[38px] md:h-[38px] s18:w-[48px] s18:h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
                             onClick={handlePrevClick}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
@@ -202,7 +202,7 @@ const Slidersection = () => {
                     </div>
                     <div className="max-[575px]:hidden max-[575px]:col-span-0 col-span-1">
                         <button
-                            className="max-[575px]:hidden ml-[-20px] custom-arrow custom-next flex justify-center items-center max-xl:p-[16px] max-md:p-[10px] max-md:w-[32px] max-md:h-[32px] md:w-[45px] md:h-[45px] w-[48px] h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
+                            className="max-[575px]:hidden ml-[-20px] custom-arrow custom-next flex justify-center items-center  max-md:w-[32px] max-md:h-[32px] md:w-[38px] md:h-[38px] s18:w-[48px] s18:h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
                             onClick={handleNextClick}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
