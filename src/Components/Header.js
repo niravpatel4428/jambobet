@@ -10,9 +10,9 @@ import Register from "./Register";
 import Login from "./Login";
 
 const Header = () => {
+  // Toggle Register / Login Modal 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalOpenRGS, setIsModalOpenRGS] = useState(false);
-
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -26,7 +26,7 @@ const Header = () => {
   const closeModalRGS = () => {
     setIsModalOpenRGS(false);
   };
-
+  // Dark mode / Light mode state 
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const toggleCollapse = () => {
@@ -43,7 +43,6 @@ const Header = () => {
     // Update the state
     setIsDarkMode(!isDarkMode);
   };
-
   useEffect(() => {
     // Check localStorage or OS preference on page load
     const savedTheme = localStorage.getItem("theme");
@@ -62,6 +61,7 @@ const Header = () => {
       document.documentElement.classList.toggle("dark", prefersDarkMode);
     }
   }, []);
+
   useEffect(() => {
     if (isCollapsed) {
       document.body.classList.add("overflow-hidden");
@@ -216,7 +216,7 @@ const Header = () => {
               </button>
             </div>
           </div>
-          {/* toggle button */}
+          {/* hamburger toggle button */}
           <button
             className="rounded absolute z-[999] xl:hidden"
             id="navbar-toggle"

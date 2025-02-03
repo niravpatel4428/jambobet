@@ -369,7 +369,7 @@ const Dashboard = () => {
                     {imageslider.map((imageslider, index) => (
                       <div key={index}>
                         <div className="cursor-pointer">
-                          <div className="max-[575px]:flex max-[575px]:justify-center lg:h-[100px] s15:h-[128px] s18:h-[162px] overflow-hidden">
+                          <div className="max-[575px]:flex max-[575px]:justify-center overflow-hidden">
                             <img
                               src={imageslider.image}
                               alt="img"
@@ -433,11 +433,11 @@ const Dashboard = () => {
                       </ul>
                     </div>
                     <div className="max-sm:p-[15px_0px_15px_20px] p-[12px_0px_12px_20px] s18:p-[22px_0px_22px_20px]">
-                      <ul className="scrollable flex max-sm:gap-[15px] sm:gap-[23px] select-none overflow-auto">
+                      <ul className="scrollable flex max-sm:gap-[15px] sm:gap-[23px] overflow-auto min-h-5">
                         {sportsData.map((sport, index) => (
                           <li
                             key={index}
-                            className="cursor-pointer flex items-center whitespace-nowrap text-mutedblue hover:text-darkblue dark:text-white dark:hover:text-yellow text-sm s18:text-base font-normal leading-[143%] transition-all duration-[0.3s]"
+                            className="cursor-pointer flex items-center whitespace-nowrap text-mutedblue hover:text-darkblue dark:text-white dark:hover:text-yellow text-sm s18:text-base font-normal leading-[143%] transition-all duration-[0.3s] "
                           >
                             {sport.name}
                             <span className="pt-[2px] min-w-[33px] min-h-[20px] ml-[5px] rounded-[23px] bg-yellow flex justify-center items-center text-white text-sm font-medium leading-[128%] last:mr-3b">

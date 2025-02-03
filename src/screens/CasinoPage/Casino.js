@@ -219,7 +219,7 @@ const Casino = () => {
                   {imageslider.map((imageslider, index) => (
                     <div key={index}>
                       <div className="cursor-pointer">
-                        <div className="max-[575px]:flex max-[575px]:justify-center rounded-md h-[93px] lg:h-[100px] s15:h-[125px] s18:h-[143px] w-full">
+                        <div className="max-[575px]:flex max-[575px]:justify-center rounded-md w-full">
                           <img
                             src={imageslider.image}
                             alt="img"
