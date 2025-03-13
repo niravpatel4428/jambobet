@@ -6,7 +6,7 @@ const Homepage = () => {
   return (
     <>
       <Layout>
-        <Slidersection />
+        {/* <Slidersection /> */}
         <Dashboard />
       </Layout>
     </>

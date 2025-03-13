@@ -80,6 +80,7 @@ select {
 .dark .select {
   background-image: url("images/angledown.svg");
 }
+.winners-slider .rfm-child {margin: 0 5px;}
 
 @keyframes fade-in {
   from {

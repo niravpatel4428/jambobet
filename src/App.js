@@ -10,25 +10,18 @@ import Transactionpage from "./screens/TransactionPage/Transactionpage";
 import whitesun from "./images/whitesun.svg";
 import moonwhite from "./images/moonwhite.svg";
 function App() {
-  //   // Dark mode / Light mode state
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  // const toggleCollapse = () => {
-  //   setIsCollapsed(!isCollapsed);
-  // };
+
   const toggleTheme = () => {
-    // Toggle the dark mode theme
     const newTheme = isDarkMode ? "light" : "dark";
     localStorage.setItem("theme", newTheme);
 
-    // Apply the theme to the document element
     document.documentElement.classList.toggle("dark", newTheme === "dark");
 
-    // Update the state
     setIsDarkMode(!isDarkMode);
   };
   useEffect(() => {
-    // Check localStorage or OS preference on page load
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       setIsDarkMode(true);
@@ -37,7 +30,6 @@ function App() {
       setIsDarkMode(false);
       document.documentElement.classList.remove("dark");
     } else {
-      // Handle default based on system preference
       const prefersDarkMode = window.matchMedia(
         "(prefers-color-scheme: dark)"
       ).matches;

@@ -7,7 +7,7 @@ const Transactionpage = () => {
     return (
         <>
             <Layout>
-                <Slidersection/>
+                {/* <Slidersection/> */}
                 <Transaction/>
             </Layout>
         </>

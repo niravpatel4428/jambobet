@@ -1,17 +1,22 @@
 import React from "react";
+import dashboardimg from "../../images/dashboardimg.png";
+import dashboardimg2 from "../../images/dashboardimg2.png";
+import dashboardimg3 from "../../images/dashboardimg3.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CustomerCare from "../../Components/CustomerCare";
 import Payroll from "../../Components/Payroll";
 import Pagination from "../../Components/Pagination";
 import BestSlipMobile from "./bestSlipMobileHomepage/BestSlipMobile";
+import CenterImageSlider from "../../Components/CenterImageSlider";
+import MobileGames from "../../Components/MobileGames";
 import CenterLeague from "./centerPart/CenterLeague";
 import BestSlipDesktop from "./rightPart/BestSlipDesktop";
 import LestSideGames from "./leftPart/LestSideGames";
 import AllCountry from "./leftPart/AllCountry";
 import TopLeague from "./leftPart/TopLeague";
 
-const Dashboard = () => {
+const MatchDetail = () => {
   return (
     <>
       <div className="pb-[70px] s15:pb-[100px]">
@@ -57,4 +62,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default MatchDetail;

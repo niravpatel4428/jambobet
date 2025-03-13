@@ -72,7 +72,7 @@ const Header = () => {
 
   return (
     <>
-      <section className="fixed top-0 left-0 right-0 w-full bg-[#0C2240] dark:bg-[#30435D] z-50 max-[420px]:py-[25px] py-3 s18:py-[35px]">
+      <section className="sticky top-0 left-0 right-0 w-full bg-[#0C2240] dark:bg-[#30435D] z-50 py-4">
         <div className="flex max-xl:justify-between items-center w-full max-w-[1780px] mx-auto max-sm:px-[15px] px-[30px]">
           <div className="max-420: relative z-[100] flex max-xl:pl-[40px]">
             <Link to="/" className="inline-block">
@@ -140,37 +140,37 @@ const Header = () => {
             <ul className="flex flex-row items-center xl:gap-[18px] s16:gap-[30px] xl:mt-0 mx-auto">
               <li>
                 {/* Native scrolling using hash links */}
-                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link to="/" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Sports Betting
                 </Link>
               </li>
               <li>
-                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link to="/" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Live Betting
                 </Link>
               </li>
               <li>
-                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link to="/" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   OdiLeague
                 </Link>
               </li>
               <li>
-                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link to="/casino" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Casino
                 </Link>
               </li>
               <li>
-                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link to="/" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Jackpots
                 </Link>
               </li>
               <li>
-                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link to="/" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Livescore
                 </Link>
               </li>
               <li>
-                <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                <Link to="/" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                   Promotions
                 </Link>
               </li>
@@ -256,37 +256,37 @@ const Header = () => {
               <ul className="flex flex-col items-center justify-center gap-5 overflow-auto">
                 <li>
                   {/* Native scrolling using hash links */}
-                  <Link className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link to="/" className="text-white text-sm s18:text-[16px] !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     Sports Betting
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link to="/" className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     Live Betting
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link to="/" className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     OdiLeague
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link to="/casino" className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     Casino
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link to="/" className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     Jackpots
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link to="/" className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     Livescore
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
+                  <Link to="/" className="text-white text-[16px] leading-[150%] font-normal hover:text-yellow transtition-all duration-[0.3s]">
                     Promotions
                   </Link>
                 </li>
