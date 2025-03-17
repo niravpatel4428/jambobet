@@ -11,7 +11,7 @@ const symbols = [symbol1, symbol2, symbol3, symbol4, symbol5, symbol6];
 const MobileGames = () => {
   return (
     <>
-      <ul className="max-md:flex hidden flex-wrap justify-between p-[20px_15px] md:p-[20px] bg-white dark:bg-[#182D4A]">
+      <ul className="max-md:flex hidden flex-wrap justify-between  py-3 px-[15px] md:p-[20px] bg-white dark:bg-[#182D4A]">
         {symbols.map((symbol, index) => (
           <li key={index} className="w-[15%]">
             <img

@@ -2,18 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const navItems = [
-  { label: "home", href: "/home" },
-  { label: "sport", href: "/" },
-  { label: "live", href: "/" },
-  { label: "aviator", href: "/" },
-  { label: "games", href: "/" },
-  { label: "virtual sport", href: "/" },
-  { label: "royal sport", href: "/" },
-  { label: "royal win", href: "/" },
-  { label: "deposit", href: "/" },
-  { label: "check ticket", href: "/" },
-  { label: "rules", href: "/" },
-  { label: "promotions", href: "/" },
+  { label: "home", innerLinks: "/home" },
+  { label: "sport", innerLinks: "/" },
+  { label: "live", innerLinks: "/" },
+  { label: "aviator", innerLinks: "/" },
+  { label: "games", innerLinks: "/" },
+  { label: "virtual sport", innerLinks: "/" },
+  { label: "royal sport", innerLinks: "/" },
+  { label: "royal win", innerLinks: "/" },
+  { label: "deposit", innerLinks: "/" },
+  { label: "check ticket", innerLinks: "/" },
+  { label: "rules", innerLinks: "/" },
+  { label: "promotions", innerLinks: "/" },
 ];
 
 const SportMode = () => {
@@ -28,8 +28,8 @@ const SportMode = () => {
             }`}
           >
             <Link
-              to={item.href}
-              className="inline-block uppercase whitespace-nowrap py-3 px-2 text-xs md:text-sm font-normal text-white hover:bg-darkblue"
+              to={item.innerLinks}
+              className="inline-block uppercase whitespace-nowrap py-2 md:py-3 px-2 text-xs md:text-sm font-normal text-white hover:bg-darkblue"
             >
               {item.label}
             </Link>

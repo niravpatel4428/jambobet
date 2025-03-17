@@ -58,16 +58,16 @@ const Match = () => {
   return (
     <>
       <div className="max-sm:mt-0 mt-3 s18:mt-[17px] sm:rounded-lg bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow">
-        <div className="sticky max-[420px]:top-[100px] top-28 sm:top-28 md:top-[126px] lg:top-[136px] xl:top-28 s15:top-[112px] s16:top-28 s18:top-[126px] rounded-[6px] bg-white dark:bg-bluedarkmode shadow-dashboardshadow">
-          <div className="max-sm:flex-col max-sm:items-start max-sm:p-[15px_15px_0px] flex p-[0px_20px] items-center justify-between border-b-[1px] border-solid border-extralightblue dark:border-lightborderyellow">
-            <span className="text-mutedblue dark:text-white text-[18px] s18:text-[20px] font-bold leading-[160%]">
+        <div className="sticky max-[420px]:top-20 top-12 sm:top-14 md:top-[126px] lg:top-[calc(136px-12px)] xl:top-28 s15:top-[110px] s16:top-28 s18:top-[122px] rounded-[6px] bg-white dark:bg-bluedarkmode shadow-dashboardshadow">
+          <div className="max-sm:flex-col max-sm:items-start max-sm:p-[8px_15px_0px] flex p-[0px_20px] items-center justify-between border-b-[1px] border-solid border-extralightblue dark:border-lightborderyellow">
+            <span className="text-mutedblue dark:text-white text-base s18:text-xl font-bold leading-none">
               Sports
             </span>
-            <ul className="scrollable max-sm:w-full flex gap-[30px] items-center">
+            <ul className="scrollable max-sm:w-full flex gap-5 items-center justify-between">
               {items.map((item, index) => (
                 <li
                   key={index}
-                  className="max-sm:whitespace-nowrap max-sm:p-[15px_0px] py-3 s18:p-[27px_0px_27px] text-sm relative flex items-center cursor-pointer text-[#737373] dark:text-white s18:text-base font-medium  !leading-tight s18:leading-[143%] hover:text-darkblue dark:hover:text-yellow transition-all duration-[0.3s] after:absolute after:content-[''] after:bg-darkblue after:w-[0px] after:left-[50%] after:translate-x-[-50%] after:h-[2px] after:mx-auto after:bottom-0 after:transition-all after:duration-[0.3s] hover:after:w-full dark:hover:after:bg-yellow"
+                  className="max-sm:whitespace-nowrap max-sm:p-[5px_0px] py-3 s18:p-[27px_0px_27px] text-sm relative flex items-center cursor-pointer text-[#737373] dark:text-white s18:text-base font-medium  !leading-tight s18:leading-[143%] hover:text-darkblue dark:hover:text-yellow transition-all duration-[0.3s] after:absolute after:content-[''] after:bg-darkblue after:w-[0px] after:left-[50%] after:translate-x-[-50%] after:h-[2px] after:mx-auto after:bottom-0 after:transition-all after:duration-[0.3s] hover:after:w-full dark:hover:after:bg-yellow"
                 >
                   {item.text && <span>{item.text}</span>}
                   {item.icon && (
@@ -92,7 +92,7 @@ const Match = () => {
               ))}
             </ul>
           </div>
-          <div className="max-sm:p-[15px_0px_15px_15px] p-[12px_0px_12px_20px] s18:p-[22px_0px_22px_20px]">
+          <div className="max-sm:p-[8px_0px_8px_15px] p-[12px_0px_12px_20px] s18:p-[22px_0px_22px_20px]">
             <ul className="scrollable flex max-sm:gap-[15px] sm:gap-[23px] overflow-auto min-h-5">
               {sportsData.map((sport, index) => (
                 <li
@@ -110,7 +110,7 @@ const Match = () => {
         </div>
         {/* leage / 1*2 / double chance header */}
         <div className="scrollable">
-          <div className="max-lg:min-w-[732px] flex items-center justify-between max-sm:p-[20px_15px] py-3 px-5 s18:p-[15px_23px]">
+          <div className="max-lg:min-w-[732px] flex items-center justify-between max-sm:p-[10px_15px] py-3 px-5 s18:p-[15px_23px]">
             <select className="rounded-[6px] bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[247px] border-none outline-none text-[#6B7280] dark:text-white text-sm font-normal leading-[114%] appearance-none">
               <option value="" selected className="">
                 Sort by league

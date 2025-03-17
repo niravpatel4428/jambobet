@@ -14,7 +14,7 @@ const Winners = () => {
       <ul className="mb-5 flex flex-row  justify-center gap-3 md:gap-5">
         <li
           className={`text-darkblue dark:text-white hover:text-yellow whitespace-nowrap text-xs md:text-sm font-semibold cursor-pointer ${
-            activeTab === "daily" ? "text-yellow underline" : ""
+            activeTab === "daily" ? "!text-yellow underline" : ""
           }`}
           onClick={() => setActiveTab("daily")} 
         >
@@ -22,7 +22,7 @@ const Winners = () => {
         </li>
         <li
           className={`text-darkblue dark:text-white hover:text-yellow whitespace-nowrap text-xs md:text-sm font-semibold cursor-pointer ${
-            activeTab === "weekly" ? "text-yellow underline" : ""
+            activeTab === "weekly" ? "!text-yellow underline" : ""
           }`}
           onClick={() => setActiveTab("weekly")}
         >
@@ -30,7 +30,7 @@ const Winners = () => {
         </li>
         <li
           className={`text-darkblue dark:text-white hover:text-yellow whitespace-nowrap text-xs md:text-sm font-semibold cursor-pointer ${
-            activeTab === "monthly" ? "text-yellow underline" : ""
+            activeTab === "monthly" ? "!text-yellow underline" : ""
           }`}
           onClick={() => setActiveTab("monthly")}
         >
