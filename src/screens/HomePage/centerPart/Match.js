@@ -58,7 +58,7 @@ const Match = () => {
   return (
     <>
       <div className="max-sm:mt-0 mt-3 s18:mt-[17px] sm:rounded-lg bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow">
-        <div className="sticky max-[420px]:top-20 top-12 sm:top-14 md:top-[126px] lg:top-[calc(136px-12px)] xl:top-28 s15:top-[110px] s16:top-28 s18:top-[122px] rounded-[6px] bg-white dark:bg-bluedarkmode shadow-dashboardshadow">
+        <div className="sticky top-12 sm:top-14 md:top-20 xl:top-16 s15:top-16 s18:top-20 rounded-[6px] bg-white dark:bg-bluedarkmode shadow-dashboardshadow">
           <div className="max-sm:flex-col max-sm:items-start max-sm:p-[8px_15px_0px] flex p-[0px_20px] items-center justify-between border-b-[1px] border-solid border-extralightblue dark:border-lightborderyellow">
             <span className="text-mutedblue dark:text-white text-base s18:text-xl font-bold leading-none">
               Sports

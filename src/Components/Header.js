@@ -274,7 +274,7 @@ const Hamburger = ({ toggleCollapse, isCollapsed }) => {
       <span
         className={`${
           isCollapsed
-            ? "w-[18px] -rotate-45 -top-[2px] duration-500"
+            ? "w-[18px] -rotate-45 -top-[3px] duration-500"
             : "duration-500"
         } relative w-[18px] max-[420px]:h-[2px] h-[3px] rounded-md bg-yellow block`}
       ></span>
