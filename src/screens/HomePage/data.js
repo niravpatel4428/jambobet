@@ -77,6 +77,26 @@ export const leaguesData = [
                 },
               ],
             ],
+            matchProfile: {
+              mainOdds: [
+                { label: "1", value: "1.70" },
+                { label: "X", value: "3.90" },
+                { label: "2", value: "5.00" },
+              ],
+              doubleChance: [
+                { label: "1 or X", value: "1.29" },
+                { label: "1 or 2", value: "1.37" },
+                { label: "X or 2", value: "1.35" },
+              ],
+              ggNg: [
+                { label: "yes", value: "1.29", highlight: true, high: true },
+                { label: "no", value: "3.50", highlight: true, high: false },
+              ],
+              drawnbet: [
+                {label:"1",value:"2.24"},
+                {label:"2",value:"2.40"},
+              ],
+            },
           },
           {
             matchid: "545659",
@@ -151,6 +171,26 @@ export const leaguesData = [
                 },
               ],
             ],
+            matchProfile: {
+              mainOdds: [
+                { label: "1", value: "1.70" },
+                { label: "X", value: "3.90" },
+                { label: "2", value: "5.00" },
+              ],
+              doubleChance: [
+                { label: "1 or X", value: "1.29" },
+                { label: "1 or 2", value: "1.37" },
+                { label: "X or 2", value: "1.35" },
+              ],
+              ggNg: [
+                { label: "yes", value: "1.29", highlight: true, high: true },
+                { label: "no", value: "3.50", highlight: true, high: false },
+              ],
+              drawnbet: [
+                {label:"1",value:"2.24"},
+                {label:"2",value:"2.40"},
+              ],
+            },
           },
           {
             matchid: "545660",
@@ -225,6 +265,26 @@ export const leaguesData = [
                 },
               ],
             ],
+            matchProfile: {
+              mainOdds: [
+                { label: "1", value: "1.70" },
+                { label: "X", value: "3.90" },
+                { label: "2", value: "5.00" },
+              ],
+              doubleChance: [
+                { label: "1 or X", value: "1.29" },
+                { label: "1 or 2", value: "1.37" },
+                { label: "X or 2", value: "1.35" },
+              ],
+              ggNg: [
+                { label: "yes", value: "1.29", highlight: true, high: true },
+                { label: "no", value: "3.50", highlight: true, high: false },
+              ],
+              drawnbet: [
+                {label:"1",value:"2.24"},
+                {label:"2",value:"2.40"},
+              ],
+            },
           },
           {
             matchid: "545662",
@@ -299,6 +359,26 @@ export const leaguesData = [
                 },
               ],
             ],
+            matchProfile: {
+              mainOdds: [
+                { label: "1", value: "1.70" },
+                { label: "X", value: "3.90" },
+                { label: "2", value: "5.00" },
+              ],
+              doubleChance: [
+                { label: "1 or X", value: "1.29" },
+                { label: "1 or 2", value: "1.37" },
+                { label: "X or 2", value: "1.35" },
+              ],
+              ggNg: [
+                { label: "yes", value: "1.29", highlight: true, high: true },
+                { label: "no", value: "3.50", highlight: true, high: false },
+              ],
+              drawnbet: [
+                {label:"1",value:"2.24"},
+                {label:"2",value:"2.40"},
+              ],
+            },
           },
         ],
       },
@@ -382,6 +462,26 @@ export const leaguesData = [
                 },
               ],
             ],
+            matchProfile: {
+              mainOdds: [
+                { label: "1", value: "1.70" },
+                { label: "X", value: "3.90" },
+                { label: "2", value: "5.00" },
+              ],
+              doubleChance: [
+                { label: "1 or X", value: "1.29" },
+                { label: "1 or 2", value: "1.37" },
+                { label: "X or 2", value: "1.35" },
+              ],
+              ggNg: [
+                { label: "yes", value: "1.29", highlight: true, high: true },
+                { label: "no", value: "3.50", highlight: true, high: false },
+              ],
+              drawnbet: [
+                {label:"1",value:"2.24"},
+                {label:"2",value:"2.40"},
+              ],
+            },
           },
         ],
       },
@@ -392,80 +492,6 @@ export const leaguesData = [
     titleWrps: [
       {
         matches: [
-          {
-            matchid: "545672",
-            team1: "Blackburn Rovers",
-            team2: "Portsmouth FC",
-            details: [
-              { text: "15/01 22:45", bold: true },
-              { text: "#4913", bold: false },
-              { text: "+153 more", bold: false },
-            ],
-            odds: [
-              [
-                {
-                  mobileVisible: true,
-                  label: "1",
-                  value: "1.70",
-                  colSpan: 4,
-                  highlight: false,
-                },
-                {
-                  mobileVisible: true,
-                  label: "X",
-                  value: "3.90",
-                  colSpan: 4,
-                  highlight: false,
-                },
-                {
-                  mobileVisible: true,
-                  label: "2",
-                  value: "5.00",
-                  colSpan: 4,
-                  highlight: false,
-                },
-              ],
-              [
-                {
-                  mobileVisible: false,
-                  label: "1 or X",
-                  value: "1.19",
-                  colSpan: 4,
-                  highlight: false,
-                },
-                {
-                  mobileVisible: false,
-                  label: "1 or 2",
-                  value: "1.27",
-                  colSpan: 4,
-                  highlight: false,
-                },
-                {
-                  mobileVisible: false,
-                  label: "X or 2",
-                  value: "2.11",
-                  colSpan: 4,
-                  highlight: false,
-                },
-              ],
-              [
-                {
-                  mobileVisible: false,
-                  label: "yes",
-                  value: "1.85",
-                  colSpan: 6,
-                  highlight: false,
-                },
-                {
-                  mobileVisible: false,
-                  label: "no",
-                  value: "1.85",
-                  colSpan: 6,
-                  highlight: false,
-                },
-              ],
-            ],
-          },
           {
             matchid: "545684",
             team1: "Blackburn Rovers",
@@ -539,6 +565,26 @@ export const leaguesData = [
                 },
               ],
             ],
+            matchProfile: {
+              mainOdds: [
+                { label: "1", value: "1.70" },
+                { label: "X", value: "3.90" },
+                { label: "2", value: "5.00" },
+              ],
+              doubleChance: [
+                { label: "1 or X", value: "1.29" },
+                { label: "1 or 2", value: "1.37" },
+                { label: "X or 2", value: "1.35" },
+              ],
+              ggNg: [
+                { label: "yes", value: "1.29", highlight: true, high: true },
+                { label: "no", value: "3.50", highlight: true, high: false },
+              ],
+              drawnbet: [
+                {label:"1",value:"2.24"},
+                {label:"2",value:"2.40"},
+              ],
+            },
           },
           {
             matchid: "545692",
@@ -613,6 +659,26 @@ export const leaguesData = [
                 },
               ],
             ],
+            matchProfile: {
+              mainOdds: [
+                { label: "1", value: "1.70" },
+                { label: "X", value: "3.90" },
+                { label: "2", value: "5.00" },
+              ],
+              doubleChance: [
+                { label: "1 or X", value: "1.29" },
+                { label: "1 or 2", value: "1.37" },
+                { label: "X or 2", value: "1.35" },
+              ],
+              ggNg: [
+                { label: "yes", value: "1.29", highlight: true, high: true },
+                { label: "no", value: "3.50", highlight: true, high: false },
+              ],
+              drawnbet: [
+                {label:"1",value:"2.24"},
+                {label:"2",value:"2.40"},
+              ],
+            },
           },
         ],
       },

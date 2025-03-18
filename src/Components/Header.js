@@ -83,7 +83,7 @@ const Header = () => {
 
   return (
     <>
-      <section className="sticky top-0 left-0 right-0 w-full bg-darkblue] dark:bg-[#30435D] z-50 py-2 md:py-4">
+      <section className="sticky top-0 left-0 right-0 w-full bg-darkblue dark:bg-[#30435D] z-50 py-2 md:py-4">
         <div className="flex max-xl:justify-between items-center w-full max-w-[1780px] mx-auto max-sm:px-[15px] px-[30px]">
           <div className="max-[420px]:relative z-[100] flex max-xl:pl-[30px]">
             <Link to="/" className="inline-block">
