@@ -83,51 +83,54 @@ const Header = () => {
 
   return (
     <>
-      <section className="sticky top-0 left-0 right-0 w-full bg-[#0C2240] dark:bg-[#30435D] z-50 py-2 md:py-4">
+      <section className="sticky top-0 left-0 right-0 w-full bg-darkblue] dark:bg-[#30435D] z-50 py-2 md:py-4">
         <div className="flex max-xl:justify-between items-center w-full max-w-[1780px] mx-auto max-sm:px-[15px] px-[30px]">
-          <div className="max-420: relative z-[100] flex max-xl:pl-[30px]">
+          <div className="max-[420px]:relative z-[100] flex max-xl:pl-[30px]">
             <Link to="/" className="inline-block">
               <img
                 src={logo}
                 alt="logo"
-                className="object-cover w-16 md:w-[130px] lg:w-[150px]
-              s16:w-[180px]"
+                className="object-cover w-10 sm:w-24 md:w-28 lg:w-36 s16:w-[180px]"
               />
             </Link>
           </div>
           <div className="max-xl:flex max-md:items-center xl:hidden gap-2">
-            <span className="p-[8px] md:hidden max-md:flex justify-center items-center bg-white rounded-[5px] cursor-pointer">
-              <img src={isDarkMode ? search : search} alt="search" className="w-3 sm:w-4" />
+            <span className="p-1 sm:p-2 md:hidden max-md:flex justify-center items-center bg-white rounded-sm md:rounded-5px cursor-pointer">
+              <img
+                src={isDarkMode ? search : search}
+                alt="search"
+                className=" w-4"
+              />
             </span>
             {/* search btn */}
             <div className="relative max-md:hidden">
               <input
                 type="search"
-                className="h-full xl:w-[150px] s16:w-full md:p-[11px_40px_11px_12px] s16:p-[11px_40px_11px_15px] rounded-[5px] bg-white dark:bg-[#4F5F75] shadow-inputshadow placeholder:text-lightblue placeholder:text-base placeholder:leading-[150%] dark:placeholder:text-white dark:text-white"
+                className="h-full xl:w-[150px] s16:w-full md:p-[11px_40px_11px_12px] s16:p-[11px_40px_11px_15px] rounded-sm md:rounded-5px bg-white dark:bg-[#4F5F75] shadow-inputshadow placeholder:text-lightblue placeholder:text-base placeholder:leading-normal dark:placeholder:text-white dark:text-white"
                 placeholder="Search.."
               />
               <img
                 src={isDarkMode ? darksearch : search}
                 alt="search"
-                className="absolute w-[18px] h-[18px] top-[50%] translate-y-[-50%] right-[15px] z-50"
+                className="absolute w-[18px] h-[18px] top-1/2 -translate-y-1/2 right-[15px] z-50"
               />
             </div>
             {/* Balance */}
-            <button className="bg-yellow border-2 border-transparent hover:border-yellow rounded-md flex gap-1 sm:gap-2 items-center justify-between py-2 px-1 sm:px-2 text-[8px] sm:text-xs font-medium text-darkGreen hover:text-yellow hover:bg-transparent group">
+            <button className="bg-yellow border-2 border-transparent hover:border-yellow rounded-sm md:rounded-5px flex gap-1 items-center justify-between p-1 sm:p-2 text-[8px] sm:text-xs font-medium text-darkGreen hover:text-yellow hover:bg-transparent group">
               <UserIcon />
               <span>$20.15</span>
             </button>
             {/* join now btn */}
             <button
               onClick={openModalRGS}
-              className="py-2 px-1 sm:px-2 text-center bg-yellow border-2 border-transparent rounded-[5px] text-[8px] sm:text-xs leading-[150%] font-medium transition-all duration-300 hover:bg-transparent hover:border-yellow hover:text-yellow"
+              className="py-1 px-1 sm:p-2 text-center bg-yellow border-2 border-transparent rounded-sm md:rounded-5px text-[8px] sm:text-xs leading-normal font-medium transition-all duration-300 hover:bg-transparent hover:border-yellow hover:text-yellow tracking-tighter"
             >
               Join Now
             </button>
             {/* login btn */}
             <button
               onClick={openModal}
-              className=" max-md:dark:hover:bg-white max-md:hover:bg-white max-md:dark:bg-white max-md:text-[0px] w-fit bg-white shadow-inputshadow  border-transparent rounded-[5px] inline-flex items-center justify-center py-2 px-2 text-base leading-none font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-white border-2 hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
+              className="max-md:dark:hover:bg-white max-md:hover:bg-white max-md:dark:bg-white max-md:text-[0px] w-fit bg-white shadow-inputshadow border-2 border-transparent rounded-sm md:rounded-5px inline-flex items-center justify-center p-1 sm:p-2 text-base leading-none font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
             >
               Login
               <img
@@ -139,12 +142,12 @@ const Header = () => {
             {/* theme btn */}
             <button
               onClick={toggleTheme}
-              className="max-sm:hidden max-md:w-[40px] max-md:h-[40px] w-[48px] h-[50px] flex justify-center items-center p-[10px] bg-white dark:bg-blueshade rounded-[5px]"
+              className="md:w-[48px] md:h-[50px] flex justify-center items-center py-1 px-1 sm:p-2 bg-white dark:bg-blueshade rounded-sm md:rounded-5px"
             >
               <img
                 src={isDarkMode ? dark : light}
                 alt={"Light Mode"}
-                className=""
+                className="max-md:size-4"
               />
             </button>
           </div>
@@ -156,7 +159,7 @@ const Header = () => {
                   {/* Native scrolling using hash links */}
                   <Link
                     to={item.path}
-                    className="text-white text-sm s18:text-base !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-300"
+                    className="text-white text-sm s18:text-base !leading-tight s18:leading-normal font-normal hover:text-yellow transtition-all duration-300"
                   >
                     {item.label}
                   </Link>
@@ -168,7 +171,7 @@ const Header = () => {
               <div className="relative">
                 <input
                   type="search"
-                  className="h-full xl:w-[150px] s16:w-full p-[8px_40px_8px_12px] s18:p-[11px_40px_11px_15px] rounded-[5px] bg-white dark:bg-[#4F5F75] shadow-inputshadow placeholder:text-lightblue placeholder:text-base placeholder:!leading-none s18: s18:placeholder:leading-[150%] dark:placeholder:text-white dark:text-white"
+                  className="h-full xl:w-[150px] s16:w-full p-[8px_40px_8px_12px] s18:p-[11px_40px_11px_15px] rounded-5px bg-white dark:bg-[#4F5F75] shadow-inputshadow placeholder:text-lightblue placeholder:text-base placeholder:!leading-none s18: s18:placeholder:leading-normal dark:placeholder:text-white dark:text-white"
                   placeholder="Search.."
                 />
                 <img
@@ -180,21 +183,21 @@ const Header = () => {
               {/* joinnow btn */}
               <button
                 onClick={openModalRGS}
-                className="min-w-[88px] bg-yellow  border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-base !leading-none s18:leading-[150%] font-medium transition-all duration-300 hover:bg-transparent hover:border-yellow hover:text-yellow"
+                className="min-w-[88px] bg-yellow  border-solid border-2 border-transparent rounded-5px inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-base !leading-none s18:leading-normal font-medium transition-all duration-300 hover:bg-transparent hover:border-yellow hover:text-yellow"
               >
                 Join Now
               </button>
               {/* login btn */}
               <button
                 onClick={openModal}
-                className="min-w-[88px] bg-white shadow-inputshadow  border-solid border-[2px] border-transparent rounded-[5px] inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-base !leading-none s18:leading-[150%] font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
+                className="min-w-[88px] bg-white shadow-inputshadow  border-solid border-2 border-transparent rounded-5px inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-base !leading-none s18:leading-normal font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
               >
                 Login
               </button>
               {/* theme btn */}
               <button
                 onClick={toggleTheme}
-                className="s18:w-[48px] s18:h-[50px] flex justify-center items-center p-2 s18:p-[10px] bg-white dark:bg-blueshade rounded-[5px]"
+                className="s18:w-[48px] s18:h-[50px] flex justify-center items-center p-2 s18:p-[10px] bg-white dark:bg-blueshade rounded-5px"
               >
                 <img
                   src={isDarkMode ? dark : light}
@@ -226,7 +229,7 @@ const Header = () => {
                     {/* Native scrolling using hash links */}
                     <Link
                       to={item.path}
-                      className="text-white text-sm s18:text-base !leading-tight s18:leading-[150%] font-normal hover:text-yellow transtition-all duration-300"
+                      className="text-white text-sm s18:text-base !leading-tight s18:leading-normal font-normal hover:text-yellow transtition-all duration-300"
                     >
                       {item.label}
                     </Link>
@@ -248,9 +251,8 @@ export default Header;
 const UserIcon = () => {
   return (
     <img src={wallet} alt="icon" className="w-3 sm:w-4 group-hover:invert" />
-  )
-}
-
+  );
+};
 
 const Hamburger = ({ toggleCollapse, isCollapsed }) => {
   return (

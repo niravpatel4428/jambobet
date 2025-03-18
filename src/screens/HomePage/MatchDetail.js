@@ -20,7 +20,7 @@ const MatchDetail = () => {
   return (
     <>
       <div className="pb-[70px] s15:pb-[100px]">
-        <div className="max-sm:px-[0px] px-[20px] xl:px-[30px] w-full max-w-[1780px] mx-auto">
+        <div className="max-sm:px-[0px] px-5 xl:px-[30px] w-full max-w-[1780px] mx-auto">
           <div className="grid grid-cols-12 gap-5 md:gap-3 s18:gap-5">
             <div className="max-md:col-span-0 max-md:hidden md:col-span-3 lg:col-span-2 s15:col-span-2">
               <div className="w-full max-w-full s18:max-w-[238px]">

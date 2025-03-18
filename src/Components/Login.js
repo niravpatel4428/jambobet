@@ -25,7 +25,7 @@ const Login = ({ isOpen, onClose }) => {
                 <h4 className="text-darkblue text-xl s16:text-2xl font-medium">Login</h4>
                 <button
                   onClick={onClose}
-                  className="w-[38px] h-[38px] min-w-[38px] flex justify-center items-center border-[1px] rounded-md border-[rgba(0, 0, 0, 0.20)] bg-[rgba(0, 0, 0, 0.05)] hover:bg-gray-300 transition-all duration-[0.4s]"
+                  className="w-[38px] h-[38px] min-w-[38px] flex justify-center items-center border  rounded-md border-[rgba(0, 0, 0, 0.20)] bg-[rgba(0, 0, 0, 0.05)] hover:bg-gray-300 transition-all duration-[0.4s]"
                 >
                   <img src={modalclose} alt="close" />
                 </button>

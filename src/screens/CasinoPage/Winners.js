@@ -10,8 +10,8 @@ const Winners = () => {
 
   const filteredWinners = winners.filter((winner) => winner.type === activeTab);
   return (
-    <div className="mb-3 winners-slider">
-      <ul className="mb-5 flex flex-row  justify-center gap-3 md:gap-5">
+    <div className="mb-3 winners-slider mt-3">
+      <ul className="mb-3 md:mb-4 flex flex-row  justify-center gap-3 md:gap-5">
         <li
           className={`text-darkblue dark:text-white hover:text-yellow whitespace-nowrap text-xs md:text-sm font-semibold cursor-pointer ${
             activeTab === "daily" ? "!text-yellow underline" : ""

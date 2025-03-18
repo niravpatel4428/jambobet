@@ -34,7 +34,7 @@ import c30 from "../../../images/c30.png";
 const CasinoCenter = () => {
   return (
     <>
-      <div className="p-5 md:p-3 s15:p-5 bg-white dark:bg-white/10 rounded-md shadow-inputshadow">
+      <div className="p-5 md:p-3 s15:p-5 bg-white dark:bg-white/10 md:rounded-md shadow-inputshadow">
         <div className="relative rounded-md shadow-inputshadow inputshadow mb-3 s15:mb-5">
           <input
             type="text"

@@ -71,23 +71,23 @@ const Transaction = () => {
                         <div className="min-w-[900px] flex flex-wrap items-center justify-between p-[20px_20px] md:p-[10px_37px] s16:p-[16px_37px] s18:p-[20px_37px] bg-lightbluebg rounded-[18px_18px_0px_0px] md:rounded-[25px_25px_0px_0px] border border-solid border-b-extrathinblack dark:bg-[#667487] dark:border-[#667487]">
                             <div className="flex items-center gap-[30px] xl:gap-[75px]">
                                 <div className='flex items-center gap-[13px]'>
-                                    <label className="text-sm xl:text-base s15:text-[20px] s18:text-[22px] text-mutedblue font-bold  !leading-tight s18:!leading-[160%] dark:text-white">From:</label>
+                                    <label className="text-sm xl:text-base s15:text-xl s18:text-[22px] text-mutedblue font-bold  !leading-tight s18:!leading-[160%] dark:text-white">From:</label>
                                     <input
                                         type="date"
-                                        className="text-mutedblue text-sm s16:text-lg s18:text-[22px] font-bold  !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white rounded-[6px] min-w-[180px] xl:min-w-[227px] py-2 px-2 md:px-3 s18:px-4 md:py-2 s18:py-4 w-full"
+                                        className="text-mutedblue text-sm s16:text-lg s18:text-[22px] font-bold  !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white rounded-md min-w-[180px] xl:min-w-[227px] py-2 px-2 md:px-3 s18:px-4 md:py-2 s18:py-4 w-full"
                                     />
                                 </div>
                                 <div className='flex items-center gap-[13px]'>
-                                    <label className="text-sm xl:text-base s15:text-[20px] s18:text-[22px] text-mutedblue font-bold  !leading-tight s18:!leading-[160%] dark:text-white">To:</label>
+                                    <label className="text-sm xl:text-base s15:text-xl s18:text-[22px] text-mutedblue font-bold  !leading-tight s18:!leading-[160%] dark:text-white">To:</label>
                                     <input
                                         type="date"
-                                        className="text-mutedblue text-sm s16:text-lg s18:text-[22px] font-bold  !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[180px] xl:min-w-[227px] rounded-[6px] py-2 px-2 md:px-3 s18:px-4 md:py-2 s18:py-4 w-full"
+                                        className="text-mutedblue text-sm s16:text-lg s18:text-[22px] font-bold  !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[180px] xl:min-w-[227px] rounded-md py-2 px-2 md:px-3 s18:px-4 md:py-2 s18:py-4 w-full"
                                     />
                                 </div>
                             </div>
                             <div className='flex items-center gap-[13px]'>
-                                <label className="text-sm xl:text-base s15:text-[20px] s18:text-[22px] text-mutedblue font-bold leading-[160%] dark:text-white">Type:</label>
-                                <select className="select text-mutedblue text-sm s16:text-lg s18:text-[22px] py-2 px-2 font-bold !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[190px] rounded-[6px] md:px-3 s18:px-4 md:py-2 s18:py-4 w-full appearance-none outline-none">
+                                <label className="text-sm xl:text-base s15:text-xl s18:text-[22px] text-mutedblue font-bold leading-[160%] dark:text-white">Type:</label>
+                                <select className="select text-mutedblue text-sm s16:text-lg s18:text-[22px] py-2 px-2 font-bold !leading-none s18:!leading-[160%] shadow-dashboardshadow border border-solid bg-white min-w-[190px] rounded-md md:px-3 s18:px-4 md:py-2 s18:py-4 w-full appearance-none outline-none">
                                     <option>All</option>
                                     <option>Type 1</option>
                                     <option>Type 2</option>

@@ -17,7 +17,7 @@ const MobileGames = () => {
             <img
               src={symbol}
               alt={`symbol-${index + 1}`}
-              className="w-full border-solid border-white border-[2px] rounded-[8px]"
+              className="w-full border-solid border-white border-2 rounded-[8px]"
             />
           </li>
         ))}

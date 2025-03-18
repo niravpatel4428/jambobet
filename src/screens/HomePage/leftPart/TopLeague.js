@@ -44,12 +44,12 @@ const TopLeague = () => {
   };
   return (
     <>
-      <div className="rounded-[6px] bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow mt-[12px]">
+      <div className="rounded-md bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow mt-3">
         <div
           className="dropdown-block cursor-pointer flex items-center justify-between rounded-[6px_6px_0px_0px] p-[8px_10px] xl:p-[8px_15px] bg-darkblue dark:bg-bluedarkmode"
           onClick={toggleLeaguesVisibility}
         >
-          <span className="text-white text-sm text-base s18:text-[18px] font-medium !leading-tight s18:leading-[155%]">
+          <span className="text-white text-sm text-base s18:text-lg font-medium !leading-tight s18:leading-[155%]">
             Top Leagues
           </span>
           <img
@@ -65,9 +65,9 @@ const TopLeague = () => {
                 key={index}
                 className="cursor-pointer flex justify-between py-2 px-3 s18:p-[10px_14px] border-b-[1px] border-solid border-bordercolor"
               >
-                <p className="relative pl-[18px] mr-[10px] text-darkblue dark:text-white text-[12px] xl:text-sm font-medium leading-[128%] md:!leading-tight s18:leading-[128%] before:absolute before:content-[''] before:w-[9px] before:h-[9px] before:bg-yellow before:left-0 before:top-[3px] before:rounded-[50%]">
+                <p className="relative pl-[18px] mr-[10px] text-darkblue dark:text-white text-xs xl:text-sm font-medium leading-[128%] md:!leading-tight s18:leading-[128%] before:absolute before:content-[''] before:w-[9px] before:h-[9px] before:bg-yellow before:left-0 before:top-[3px] before:rounded-[50%]">
                   {league.name}
-                  <span className="text-lightshadeblue dark:text-lightwhite text-[12px] font-normal block leading-[150%] md:!leading-tight s18:leading-[150%]">
+                  <span className="text-lightshadeblue dark:text-lightwhite text-xs font-normal block leading-normal md:!leading-tight s18:leading-normal">
                     {league.country}
                   </span>
                 </p>

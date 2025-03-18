@@ -13,8 +13,8 @@ export default function LoadingPopup() {
   return (
     isOpen && (
       <div className="fixed inset-0 flex items-center justify-center backdrop-blur-sm z-50">
-        <div className="h-screen w-full max-w-[90%] md:max-w-2xl mx-auto flex flex-col justify-end items-end pb-12">
-          <div className="w-3/4 mx-auto h-auto rounded-lg">
+        <div className="h-screen w-full max-w-sm sm:max-w-md md:max-w-lg xl:max-w-xl mx-auto flex flex-col justify-end items-end py-5">
+          <div className="w-3/4 mx-auto h-auto rounded-md overflow-auto max-h-[750px]">
             <img src={modalonload} alt="img" className="object-contain" />
           </div>
           <div className="flex justify-center items-center w-full pt-4">

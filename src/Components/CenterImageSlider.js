@@ -34,12 +34,12 @@ const CenterImageSlider = () => {
         {imageslider.map((imageslider, index) => (
           <div
             key={index}
-            className="cursor-pointer sm:rounded-md w-full !flex"
+            className="cursor-pointer md:rounded-md w-full !flex"
           >
             <img
               src={imageslider.image}
               alt="img"
-              className="w-full sm:rounded-md h-full"
+              className="w-full md:rounded-md h-full"
             />
           </div>
         ))}

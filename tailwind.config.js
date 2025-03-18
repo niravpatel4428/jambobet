@@ -46,6 +46,12 @@ module.exports = {
         inputshadow: "0px 4px 14px 0px rgba(0, 0, 0, 0.10)",
         dashboardshadow: "0px 4.532px 15.863px 0px rgba(0, 0, 0, 0.10)",
       },
+      borderRadius: {
+        '5px': '5px',
+      },
+      lineHeight: {
+        '12': '1.12',
+      },
     },
   },
 };

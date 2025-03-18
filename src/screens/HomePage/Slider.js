@@ -162,12 +162,12 @@ const Slidersection = () => {
     };
 
     return (
-        <div className="max-[420px]:overflow-hidden image-slider  relative max-sm:px-[15px] px-[20px] max-sm:mb-[10px] mb-[20px] mt-[-1px]">
-            <div className="p-[15px_20px_15px_20px] sm:p-3 s15:p-4 s18:p-[21px_20px_20px_20px] border border-solid rounded-[0px_0px_20px_20px] dark:bg-[#182D4A] bg-lightyellow shadow-inputshadow border-yellow dark:border-[#5D6C80]">
-                <div className="max-[575px]:justify-center max-md:ml-[0px] max-lg:p-[0px] p-[0px_0px_0px_18px] grid grid-cols-12 gap-[35px] items-center">
+        <div className="max-[420px]:overflow-hidden image-slider  relative max-sm:px-[15px] px-5 max-sm:mb-[10px] mb-5 mt-[-1px]">
+            <div className="p-[15px_20px_15px_20px] sm:p-3 s15:p-4 s18:p-5 border border-solid rounded-[0px_0px_20px_20px] dark:bg-[#182D4A] bg-lightyellow shadow-inputshadow border-yellow dark:border-[#5D6C80]">
+                <div className="max-[575px]:justify-center max-md:ml-[0px] max-lg:p-0 p-[0px_0px_0px_18px] grid grid-cols-12 gap-[35px] items-center">
                     <div className="max-[575px]:hidden max-[575px]:col-span-0 col-span-1">
                         <button
-                            className="max-[575px]:hidden ml-auto custom-arrow custom-prev flex justify-center items-center  max-md:w-[32px] max-md:h-[32px] md:w-[38px] md:h-[38px] s18:w-[48px] s18:h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
+                            className="max-[575px]:hidden ml-auto custom-arrow custom-prev flex justify-center items-center  max-md:w-8 max-md:h-8 md:w-[38px] md:h-[38px] s18:w-12 s18:h-12 bg-yellow border-solid border-2 border-yellow rounded-5px hover:bg-transparent transition-all duration-300"
                             onClick={handlePrevClick}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
@@ -190,10 +190,10 @@ const Slidersection = () => {
                                                             : imgslider.image
                                                     }
                                                     alt="img"
-                                                    className="max-[575px]:w-[35px] size-[35px] xl:size-9 s15:size-10 s18:size-12 rounded-[5px]"
+                                                    className="max-[575px]:w-[35px] size-[35px] xl:size-9 s15:size-10 s18:size-12 rounded-5px"
                                                 />
                                             </div>
-                                            <span className="block text-center max-md:text-[10px] text-[12px] leading-[16px] mt-[3px] dark:text-white">{imgslider.name}</span>
+                                            <span className="block text-center max-md:text-[10px] text-xs leading-4 mt-[3px] dark:text-white">{imgslider.name}</span>
                                         </div>
                                     </div>
                                 ))}
@@ -202,7 +202,7 @@ const Slidersection = () => {
                     </div>
                     <div className="max-[575px]:hidden max-[575px]:col-span-0 col-span-1">
                         <button
-                            className="max-[575px]:hidden ml-[-20px] custom-arrow custom-next flex justify-center items-center  max-md:w-[32px] max-md:h-[32px] md:w-[38px] md:h-[38px] s18:w-[48px] s18:h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
+                            className="max-[575px]:hidden ml-[-20px] custom-arrow custom-next flex justify-center items-center  max-md:w-8 max-md:h-8 md:w-[38px] md:h-[38px] s18:w-12 s18:h-12 bg-yellow border-solid border-2 border-yellow rounded-5px hover:bg-transparent transition-all duration-300"
                             onClick={handleNextClick}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
@@ -212,9 +212,9 @@ const Slidersection = () => {
                     </div>
                 </div>
                 <div className="relative top-[-65px] p-[0px_140px_0px_120px] hidden">
-                    <div className="custom-arrows w-full justify-between top-[50%] translate-y-[50%] flex max-md:space-x-2 space-x-4">
+                    <div className="custom-arrows w-full justify-between top-1/2 -translate-y-1/2 flex max-md:space-x-2 space-x-4">
                         <button
-                            className="custom-prev flex justify-center items-center max-xl:p-[16px] max-md:p-[10px] max-md:w-[32px] max-md:h-[32px] md:w-[45px] md:h-[45px] w-[48px] h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
+                            className="custom-prev flex justify-center items-center max-xl:p-4 max-md:p-[10px] max-md:w-8 max-md:h-8 md:w-[45px] md:h-[45px] w-12 h-12 bg-yellow border-solid border-2 border-yellow rounded-5px hover:bg-transparent transition-all duration-300"
                             onClick={handlePrevClick}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">
@@ -222,7 +222,7 @@ const Slidersection = () => {
                             </svg>
                         </button>
                         <button
-                            className="custom-next flex justify-center items-center max-xl:p-[16px] max-md:p-[10px] max-md:w-[32px] max-md:h-[32px] md:w-[45px] md:h-[45px] w-[48px] h-[48px] bg-yellow border-solid border-[2px] border-yellow rounded-[5px] hover:bg-transparent transition-all duration-[0.3s]"
+                            className="custom-next flex justify-center items-center max-xl:p-4 max-md:p-[10px] max-md:w-8 max-md:h-8 md:w-[45px] md:h-[45px] w-12 h-12 bg-yellow border-solid border-2 border-yellow rounded-5px hover:bg-transparent transition-all duration-300"
                             onClick={handleNextClick}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="16" viewBox="0 0 10 16" fill="none">

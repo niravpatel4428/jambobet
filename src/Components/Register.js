@@ -33,7 +33,7 @@ const Register = ({ isOpen, onClose }) => {
                 </div>
                 <button
                   onClick={onClose}
-                  className="w-[30px] h-[30px] min-w-[30px] s16:w-[38px] s16:h-[38px] s16:min-w-[38px] flex justify-center items-center border-[1px] rounded-md border-[rgba(0, 0, 0, 0.20)] bg-[rgba(0, 0, 0, 0.05)] hover:bg-gray-300 transition-all duration-[0.4s]"
+                  className="w-[30px] h-[30px] min-w-[30px] s16:w-[38px] s16:h-[38px] s16:min-w-[38px] flex justify-center items-center border  rounded-md border-[rgba(0, 0, 0, 0.20)] bg-[rgba(0, 0, 0, 0.05)] hover:bg-gray-300 transition-all duration-[0.4s]"
                 >
                   <img src={modalclose} alt="close" />
                 </button>

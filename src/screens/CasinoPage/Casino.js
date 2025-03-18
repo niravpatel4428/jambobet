@@ -20,14 +20,14 @@ const Casino = () => {
             <div className="col-span-12 md:col-span-9 s15:col-span-7">
               <div className="flex flex-col gap-[10px] ">
                 <CenterImageSlider />
-                <div className="p-5 md:p-3 s15:p-5 rounded-md shadow-inputshadow">
+                <>
                   <>
                     <Winners />
                   </>
                   <>
                     <CasinoCenter />
                   </>
-                </div>
+                </>
               </div>
               {/* Pagination */}
               <Pagination />
