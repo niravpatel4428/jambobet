@@ -1,14 +1,4 @@
 import React, { useRef, useState } from "react";
-import symbol1 from "../../../images/symbol1.png";
-import symbol2 from "../../../images/symbol2.png";
-import symbol3 from "../../../images/symbol3.png";
-import symbol4 from "../../../images/symbol4.png";
-import symbol5 from "../../../images/symbol5.png";
-import symbol6 from "../../../images/symbol6.png";
-import downarrow from "../../../images/downarrow.svg";
-import calender from "../../../images/calender.svg";
-import whitedown from "../../../images/whitedown.svg";
-import whitecalender from "../../../images/whitecalender.svg";
 import remove from "../../../images/remove.svg";
 import grayremove from "../../../images/grayremove.svg";
 import darkremove from "../../../images/darkremove.svg";
@@ -91,7 +81,7 @@ const BestSlipDesktop = () => {
             <span className="cursor-pointer p-[10px_14px] xl:p-[8px_12px] s18:p-[12px_14px] s18:w-[58px] s18:h-[43px] flex justify-center items-center rounded-md bg-extralightblack border border-solid border-lightblack text-black text-base md:text-sm s18:text-base font-medium !leading-none s18:leading-12 hover:bg-yellow hover:border-bordercolor transition-all duration-300 dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
               500/-
             </span>
-            <span className="flex justify-end p-[10px_14px] xl:p-[8px_12px] s18:p-[12px_14px] items-center w-full s18:h-[43px] rounded-md border-solid border-bordercolor bg-darkblue text-lg text-base s18:text-lg text-white font-semibold !leading-none s18:leading-[120%] dark:text-yellow dark:border dark:border-solid dark:bg-[#3A495F] dark:border-doubleextralightwhite">
+            <span className="flex justify-end p-[10px_14px] xl:p-[8px_12px] s18:p-[12px_14px] items-center w-full s18:h-[43px] rounded-md border-solid border-bordercolor bg-darkblue text-base s18:text-lg text-white font-semibold !leading-none s18:leading-[120%] dark:text-yellow dark:border dark:border-solid dark:bg-[#3A495F] dark:border-doubleextralightwhite">
               50
             </span>
           </div>

@@ -109,7 +109,7 @@ const BestSlipMobile = () => {
                   <span className="cursor-pointer p-[8px_10px] max-[1439px]:p-[12px_14px] max-[1439px]:w-[58px] max-[1439px]:h-[43px] flex justify-center items-center rounded-md bg-extralightblack border border-solid border-lightblack text-black text-sm max-[1439px]:text-base font-medium leading-12 hover:bg-yellow hover:border-bordercolor transition-all duration-300 dark:bg-[#2F425C] dark:border-doubleextralightwhite dark:text-white dark:hover:bg-yellow dark:hover:text-darkblue">
                     500/-
                   </span>
-                  <span className="flex justify-end p-[12px_14px] items-center w-full h-[43px] rounded-md border-solid border-bordercolor bg-darkblue text-lg text-white font-normal font-semibold leading-[120%] dark:text-yellow dark:border dark:border-solid dark:bg-[#3A495F] dark:border-doubleextralightwhite">
+                  <span className="flex justify-end p-[12px_14px] items-center w-full h-[43px] rounded-md border-solid border-bordercolor bg-darkblue text-lg text-white font-normal  leading-[120%] dark:text-yellow dark:border dark:border-solid dark:bg-[#3A495F] dark:border-doubleextralightwhite">
                     50
                   </span>
                 </div>

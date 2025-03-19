@@ -1,15 +1,16 @@
 import React from "react";
-import whiteselectdown from "../../../../images/whiteselectdown.svg";
-import selectdropdownsvg from "../../../../images/selectdropdownsvg.svg";
-import { leaguesData } from "./../../data";
+import whiteselectdown from "../../../images/whiteselectdown.svg";
+import selectdropdownsvg from "../../../images/selectdropdownsvg.svg";
+import { leaguesData } from "../data";
 import DetailNavbar from "./DetailNavbar";
+import HomeLayout from "../HomeLayout";
 
-const MatchDetail = ({setShowDetail,showDetail}) => {
+const MatchDetail = ({ setShowDetail, showDetail }) => {
   const match = leaguesData[0].titleWrps[0].matches[0];
   return (
-    <>
+    <HomeLayout>
       <DetailNavbar showDetail={showDetail} setShowDetail={setShowDetail} />
-      <div className=" bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow sm:!rounded-[0_0_12px_12px]">
+      <div className="bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow sm:!rounded-[0_0_12px_12px]">
         {/* match profile  */}
         <div className="w-full">
           <div className="w-full flex justify-between items-center cursor-pointer max-sm:p-[10px_15px] p-[10px_23px] bg-bglightblue dark:bg-[#0c224060]">
@@ -308,7 +309,7 @@ const MatchDetail = ({setShowDetail,showDetail}) => {
           </div>
         </div>
       </div>
-    </>
+    </HomeLayout>
   );
 };
 

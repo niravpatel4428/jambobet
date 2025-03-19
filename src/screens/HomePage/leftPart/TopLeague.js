@@ -49,7 +49,7 @@ const TopLeague = () => {
           className="dropdown-block cursor-pointer flex items-center justify-between rounded-[6px_6px_0px_0px] p-[8px_10px] xl:p-[8px_15px] bg-darkblue dark:bg-bluedarkmode"
           onClick={toggleLeaguesVisibility}
         >
-          <span className="text-white text-sm text-base s18:text-lg font-medium !leading-tight s18:leading-[155%]">
+          <span className="text-white text-sm  s18:text-lg font-medium !leading-tight s18:leading-[155%]">
             Top Leagues
           </span>
           <img

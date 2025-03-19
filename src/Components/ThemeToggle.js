@@ -7,12 +7,12 @@ const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true); // Ensures the button works on the client side
+    setMounted(true); 
   }, []);
 
   const currentTheme = theme === 'system' ? systemTheme : theme; 
 
-  if (!mounted) return null; // Prevents rendering on the server side
+  if (!mounted) return null; 
 
   return (
     <button

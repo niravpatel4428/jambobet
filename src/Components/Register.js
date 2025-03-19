@@ -2,7 +2,6 @@ import React from "react";
 import modalclose from "../images/modalclose.svg";
 import userForm from "../images/userForm.svg";
 import lock from "../images/lock.svg";
-import { Link } from "react-router-dom";
 import eye from "../images/eye.svg";
 import referral from "../images/referral.svg";
 

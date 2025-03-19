@@ -70,7 +70,7 @@ const AllCountry = () => {
           className="dropdown-block cursor-pointer flex items-center justify-between rounded-[6px_6px_0px_0px] p-[8px_10px] xl:p-[8px_15px] bg-darkblue dark:bg-bluedarkmode"
           onClick={toggleCountryVisibility}
         >
-          <span className="text-white text-sm text-base s18:text-lg font-medium !leading-tight s18:leading-[155%]">
+          <span className="text-white text-sm  s18:text-lg font-medium !leading-tight s18:leading-[155%]">
             All countries
           </span>
           <img
@@ -94,7 +94,7 @@ const AllCountry = () => {
                     </li>
                   </ul>
                 </div>
-                <span className="flex items-center text-lightshadeblue dark:text-lightwhite text-xs xl:text-sm font-normal block leading-[128%]">
+                <span className="flex items-center text-lightshadeblue dark:text-lightwhite text-xs xl:text-sm font-normal leading-[128%]">
                   {country.count}
                   <img
                     src={isDarkMode ? smallwhite : graydropdown}

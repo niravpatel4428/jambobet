@@ -5,11 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import dashboardimg from "../images/dashboardimg.png";
 import dashboardimg2 from "../images/dashboardimg2.png";
 import dashboardimg3 from "../images/dashboardimg3.png";
-const imageslider = [
-  { image: dashboardimg },
-  { image: dashboardimg2 },
-  { image: dashboardimg3 },
-];
+
 const CenterImageSlider = () => {
   const sliderRef = useRef();
   const settings = {
