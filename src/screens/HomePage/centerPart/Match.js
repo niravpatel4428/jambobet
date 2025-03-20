@@ -7,7 +7,8 @@ import whitecalender from "../../../images/whitecalender.svg";
 import selectdropdownsvg from "../../../images/selectdropdownsvg.svg";
 import whiteselectdown from "../../../images/whiteselectdown.svg";
 import { leaguesData } from "../data";
-
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 const sportsData = [
   { name: "Soccer", count: 135 },
   { name: "eSports", count: 27 },
@@ -31,18 +32,7 @@ const Match = () => {
   const handleOddClick = (id) => {
     setActiveOdd((prev) => (prev === id ? null : id));
   };
-  const items = [
-    { text: "Hrs", icon: downarrow, darkIcon: whitedown },
-    { text: "TODAY" },
-    { text: "THU" },
-    { text: "FRI" },
-    { text: "SAT" },
-    { text: "SUN" },
-    {
-      text: "",
-      icons: isDarkMode ? [whitecalender, whitedown] : [calender, downarrow],
-    },
-  ];
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 639);
@@ -58,60 +48,12 @@ const Match = () => {
   return (
     <>
       <div className="max-sm:mt-0 mt-3 s18:mt-[17px] sm:rounded-lg bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow">
-        <div className="sticky top-10 sm:top-12 md:top-20 xl:top-16 s15:top-16 s18:top-20 rounded-md bg-white dark:bg-bluedarkmode shadow-dashboardshadow">
-          <div className="max-sm:flex-col max-sm:items-start max-sm:p-[8px_15px_0px] flex p-[0px_20px] items-center justify-between border-b-[1px] border-solid border-extralightblue dark:border-lightborderyellow">
-            <span className="text-mutedblue dark:text-white text-base s18:text-xl font-bold leading-none">
-              Sports
-            </span>
-            <ul className="scrollable max-sm:w-full flex gap-5 items-center justify-between">
-              {items.map((item, index) => (
-                <li
-                  key={index}
-                  className="max-sm:whitespace-nowrap max-sm:p-[5px_0px] py-3 s18:p-[27px_0px_27px] text-sm relative flex items-center cursor-pointer text-[#737373] dark:text-white s18:text-base font-medium  !leading-tight s18:leading-[143%] hover:text-darkblue dark:hover:text-yellow transition-all duration-300 after:absolute after:content-[''] after:bg-darkblue after:w-[0px] after:left-[50%] after:translate-x-[-50%] after:h-[2px] after:mx-auto after:bottom-0 after:transition-all after:duration-300 hover:after:w-full dark:hover:after:bg-yellow"
-                >
-                  {item.text && <span>{item.text}</span>}
-                  {item.icon && (
-                    <img
-                      src={
-                        isDarkMode && item.darkIcon ? item.darkIcon : item.icon
-                      }
-                      alt="icon"
-                      className="min-w-[10px] ml-[4px]"
-                    />
-                  )}
-                  {item.icons &&
-                    item.icons.map((icon, i) => (
-                      <img
-                        key={i}
-                        src={icon}
-                        alt="icon"
-                        className={i > 0 ? "min-w-[10px] ml-[4px]" : ""}
-                      />
-                    ))}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="max-sm:p-[8px_0px_8px_15px] p-[12px_0px_12px_20px] s18:p-[22px_0px_22px_20px]">
-            <ul className="scrollable flex max-sm:gap-[15px] sm:gap-[23px] overflow-auto min-h-5">
-              {sportsData.map((sport, index) => (
-                <li
-                  key={index}
-                  className="cursor-pointer flex items-center whitespace-nowrap text-mutedblue hover:text-darkblue dark:text-white dark:hover:text-yellow text-sm s18:text-base font-normal leading-[143%] transition-all duration-300 "
-                >
-                  {sport.name}
-                  <span className="pt-[2px] min-w-[33px] min-h-[20px] ml-[5px] rounded-[23px] bg-yellow flex justify-center items-center text-white text-sm font-medium leading-[128%] last:mr-3b">
-                    {sport.count}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <StickyHeader />
+
         {/* leage / 1*2 / double chance header */}
         <div className="scrollable">
-          <div className="max-lg:min-w-[732px] flex items-center justify-between max-sm:p-[10px_15px] py-3 px-5 s18:p-[15px_23px]">
-            <select className="rounded-md bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[247px] border-none outline-none text-[#6B7280] dark:text-white text-sm font-normal leading-[114%] appearance-none">
+          <div className="max-md:min-w-full max-lg:min-w-[732px] flex items-center justify-between max-sm:p-[10px_15px] py-3 px-5 s18:p-[15px_23px]">
+            <select className="rounded-md bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[247px] border-none outline-none text-[#6B7280] dark:text-white text-xs md:text-sm font-normal leading-[114%] appearance-none max-md:mx-1">
               <option value="" selected className="">
                 Sort by league
               </option>
@@ -119,19 +61,19 @@ const Match = () => {
                 Sort by time
               </option>
             </select>
-            <span className="text-[#6B7280] dark:text-white text-sm font-normal leading-[128%]">
+            <span className="text-[#6B7280] dark:text-white text-sm font-normal leading-[128%] max-md:hidden">
               1X2
             </span>
-            <span className="text-[#6B7280] dark:text-white text-sm font-normal leading-[128%]">
+            <span className="text-[#6B7280] dark:text-white text-sm font-normal leading-[128%] max-md:hidden">
               Double chance
             </span>
-            <select className="rounded-md bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[213px] border-none outline-none text-[#6B7280] dark:text-white text-sm font-normal leading-[114%] appearance-none">
-              <option value="" selected className="">
+            <select className="rounded-md bg-[#EFEFEF] dark:bg-bluedarkmode py-2 px-[11px] s18:p-[9px_11px] w-[213px] border-none outline-none text-[#6B7280] dark:text-white text-xs md:text-sm font-normal leading-[114%] appearance-none max-md:mx-1">
+              <option value="GG/NG" selected>
                 GG/NG
               </option>
-              <option value="option1" className="">
-                To qualify
-              </option>
+              <option value="over/under">Over/Under</option>
+              <option value="lastgoal">Last goal</option>
+              <option value="doublechance">Double chance</option>
             </select>
           </div>
         </div>
@@ -260,6 +202,99 @@ const Match = () => {
         </div>
       </div>
     </>
+  );
+};
+
+const StickyHeader = ({ isDarkMode }) => {
+  const items = [
+    { text: "TODAY" },
+    { text: "THU" },
+    { text: "FRI" },
+    { text: "SAT" },
+    { text: "SUN" },
+  ];
+  const [startDate, setStartDate] = useState(null);
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="sticky top-10 sm:top-12 md:top-20 xl:top-16 s15:top-16 s18:top-20 rounded-md bg-white dark:bg-bluedarkmode shadow-dashboardshadow">
+      <div className="max-sm:flex-col max-sm:items-start max-sm:p-[8px_15px_0px] flex p-[0px_20px] items-center justify-between border-b-[1px] border-solid border-extralightblue dark:border-lightborderyellow">
+        <span className="text-mutedblue dark:text-white text-base s18:text-xl font-bold leading-none">
+          Sports
+        </span>
+        <ul className="max-sm:w-full flex gap-2 sm:gap-5 items-center justify-between">
+          <li className="sport-first-item max-sm:whitespace-nowrap max-sm:p-[5px_0px] py-3 s18:p-[27px_0px_27px] text-sm relative flex items-center cursor-pointer text-[#737373] dark:text-white s18:text-base font-medium !leading-tight s18:leading-[143%] hover:text-darkblue dark:hover:text-yellow transition-all duration-300 after:absolute after:content-[''] after:bg-darkblue after:w-[0px] after:left-[50%] after:translate-x-[-50%] after:h-[2px] after:mx-auto after:bottom-0 after:transition-all after:duration-300 hover:after:w-full dark:hover:after:bg-yellow">
+            <select name="hours" id="hours" className="bg-transparent">
+              <option value="hrs">Hrs</option>
+              <option value="12hrs">12hrs</option>
+              <option value="10hrs">10hrs</option>
+              <option value="8hrs">8hrs</option>
+            </select>
+          </li>
+          {items.map((item, index) => (
+            <li
+              key={index}
+              className="max-sm:whitespace-nowrap max-sm:p-[5px_0px] py-3 s18:p-[27px_0px_27px] text-xs sm:text-sm relative flex items-center cursor-pointer text-[#737373] dark:text-white s18:text-base font-medium  !leading-tight s18:leading-[143%] hover:text-darkblue dark:hover:text-yellow transition-all duration-300 after:absolute after:content-[''] after:bg-darkblue after:w-[0px] after:left-[50%] after:translate-x-[-50%] after:h-[2px] after:mx-auto after:bottom-0 after:transition-all after:duration-300 hover:after:w-full dark:hover:after:bg-yellow"
+            >
+              {item.text && <span>{item.text}</span>}
+              {item.icon && (
+                <img
+                  src={isDarkMode && item.darkIcon ? item.darkIcon : item.icon}
+                  alt="icon"
+                  className="min-w-[10px] ml-[4px]"
+                />
+              )}
+            </li>
+          ))}
+          <li className="flex items-center">
+            <div className="relative">
+              <div
+                className="relative flex items-center sport-section"
+                onClick={() => setOpen(!open)}
+              >
+                <img
+                  src={isDarkMode && whitecalender ? whitecalender : calender}
+                  alt="icon"
+                  className="min-w-[10px] ml-[4px]"
+                />
+                <img
+                  src={isDarkMode && whitedown ? whitedown : downarrow}
+                  alt="icon"
+                  className="min-w-[10px] ml-[4px]"
+                />
+              </div>
+              {open && (
+                <div className="absolute top-12 right-0 z-50">
+                  <DatePicker
+                    selected={startDate}
+                    onChange={(date) => {
+                      setStartDate(date);
+                      setOpen(false);
+                    }}
+                    inline
+                     calendarClassName="custom-calendar !bg-white dark:!bg-bluedarkmode"
+                  />
+                </div>
+              )}
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div className="max-sm:p-[8px_0px_8px_15px] p-[12px_0px_12px_20px] s18:p-[22px_0px_22px_20px]">
+        <ul className="scrollable flex max-sm:gap-[15px] sm:gap-[23px] overflow-auto min-h-5">
+          {sportsData.map((sport, index) => (
+            <li
+              key={index}
+              className="cursor-pointer flex items-center whitespace-nowrap text-mutedblue hover:text-darkblue dark:text-white dark:hover:text-yellow text-sm s18:text-base font-normal leading-[143%] transition-all duration-300 "
+            >
+              {sport.name}
+              <span className="pt-[2px] min-w-[33px] min-h-[20px] ml-[5px] rounded-[23px] bg-yellow flex justify-center items-center text-white text-sm font-medium leading-[128%] last:mr-3b">
+                {sport.count}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 

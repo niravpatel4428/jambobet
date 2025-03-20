@@ -22,6 +22,7 @@ import slider17img from "../images/slider17img.png";
 import slider18img from "../images/slider18img.png";
 import slider19img from "../images/slider19img.png";
 import darkhome from "../images/darkhome.png";
+import { Link } from "react-router-dom";
  
 const Slidersection = () => {
 
@@ -179,7 +180,7 @@ const Slidersection = () => {
                         <div className="image-slider-wrp max-[575px]:ml-[0px] max-md:ml-[10px] max-lg:ml-[5px]">
                             <Slider ref={sliderRef} {...settings}>
                                 {imgslider.map((imgslider, index) => (
-                                    <div key={index}>
+                                    <Link to={imgslider.link} key={index}>
                                         <div className="cursor-pointer">
                                             <div className="max-[575px]:flex max-[575px]:justify-center">
                                                 <img
@@ -195,7 +196,7 @@ const Slidersection = () => {
                                             </div>
                                             <span className="block text-center max-md:text-[10px] text-xs leading-4 mt-[3px] dark:text-white">{imgslider.name}</span>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))}
                             </Slider>
                         </div>
@@ -239,23 +240,23 @@ const Slidersection = () => {
 export default Slidersection;
 
 const imgslider = [
-    { image: home, darkImage: darkhome, name: 'Home', },
-    { image: slider2img, darkImage: slider2img, name: '[55]' },
-    { image: slider3img, darkImage: slider3img, name: 'Soccer' },
-    { image: slider4img, darkImage: slider4img, name: 'OdiLeague' },
-    { image: slider5img, darkImage: slider5img, name: 'Aviator' },
-    { image: slider6img, darkImage: slider6img, name: 'Games' },
-    { image: slider7img, darkImage: slider7img, name: 'Crash' },
-    { image: slider8img, darkImage: slider8img, name: 'Casino' },
-    { image: slider9img, darkImage: slider9img, name: 'Promos' },
-    { image: slider10img, darkImage: slider10img, name: 'LigiNare' },
-    { image: slider11img, darkImage: slider11img, name: 'Evolution' },
-    { image: slider12img, darkImage: slider12img, name: 'OdiTurbo' },
-    { image: slider13img, darkImage: slider13img, name: 'Slots' },
-    { image: slider14img, darkImage: slider14img, name: 'eSoccer' },
-    { image: slider15img, darkImage: slider15img, name: 'Tennis' },
-    { image: slider16img, darkImage: slider16img, name: 'Jackpot' },
-    { image: slider17img, darkImage: slider17img, name: 'Basketball' },
-    { image: slider18img, darkImage: slider18img, name: 'Ice Hockey' },
-    { image: slider19img, darkImage: slider19img, name: 'Rugby' },
+    {link:"/home", image: home, darkImage: darkhome, name: 'Home', },
+    {link:"/home", image: slider2img, darkImage: slider2img, name: '[55]' },
+    {link:"/home", image: slider3img, darkImage: slider3img, name: 'Soccer' },
+    {link:"/home", image: slider4img, darkImage: slider4img, name: 'OdiLeague' },
+    {link:"/home", image: slider5img, darkImage: slider5img, name: 'Aviator' },
+    {link:"/home", image: slider6img, darkImage: slider6img, name: 'Games' },
+    {link:"/home", image: slider7img, darkImage: slider7img, name: 'Crash' },
+    {link:"/home", image: slider8img, darkImage: slider8img, name: 'Casino' },
+    {link:"/home", image: slider9img, darkImage: slider9img, name: 'Promos' },
+    {link:"/home", image: slider10img, darkImage: slider10img, name: 'LigiNare' },
+    {link:"/home", image: slider11img, darkImage: slider11img, name: 'Evolution' },
+    {link:"/home", image: slider12img, darkImage: slider12img, name: 'OdiTurbo' },
+    {link:"/home", image: slider13img, darkImage: slider13img, name: 'Slots' },
+    {link:"/home", image: slider14img, darkImage: slider14img, name: 'eSoccer' },
+    {link:"/home", image: slider15img, darkImage: slider15img, name: 'Tennis' },
+    {link:"/home", image: slider16img, darkImage: slider16img, name: 'Jackpot' },
+    {link:"/home", image: slider17img, darkImage: slider17img, name: 'Basketball' },
+    {link:"/home", image: slider18img, darkImage: slider18img, name: 'Ice Hockey' },
+    {link:"/home", image: slider19img, darkImage: slider19img, name: 'Rugby' },
 ];

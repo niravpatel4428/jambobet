@@ -10,14 +10,13 @@ const CenterImageSlider = () => {
   const sliderRef = useRef();
   const settings = {
     arrows: false,
-    dots: false,
+    dots: true,
     fade: true,
     autoplay: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [],
   };
   const imageslider = [
     { image: dashboardimg },
@@ -25,7 +24,7 @@ const CenterImageSlider = () => {
     { image: dashboardimg3 },
   ];
   return (
-    <>
+    <div className="center-img-slider">
       <Slider ref={sliderRef} {...settings}>
         {imageslider.map((imageslider, index) => (
           <div
@@ -40,7 +39,7 @@ const CenterImageSlider = () => {
           </div>
         ))}
       </Slider>
-    </>
+    </div>
   );
 };
 

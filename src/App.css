@@ -69,6 +69,10 @@ select {
   background-position: right 11px center;
 }
 
+select:focus-visible {
+  outline: none;
+}
+
 .dark select {
   background-image: url("images/whiteselectdown.svg");
 }
@@ -80,7 +84,49 @@ select {
 .dark .select {
   background-image: url("images/angledown.svg");
 }
-.winners-slider .rfm-child {margin: 0 5px;}
+.winners-slider .rfm-child {
+  margin: 0 5px;
+}
+
+.center-img-slider .slick-dots {
+  bottom: 12px;
+}
+.center-img-slider .slick-dots li button:before {
+  font-size: 20px;
+  color: #ebbc13;
+  opacity: 1;
+}
+.center-img-slider .slick-dots li.slick-active button:before {
+  color: green;
+  opacity: 1;
+}
+.center-img-slider .slick-dots li {
+  margin: 0 10px;
+}
+
+.sport-section input[type="date"]::-webkit-calendar-picker-indicator {
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url(./images/calender.svg) no-repeat;
+  width: 20px;
+  height: 20px;
+}
+.sport-first-item select {
+  background-image: none;
+}
+
+/* react datepicker */
+.react-datepicker { font-family: "Poppins", serif; border-radius: 6px!; -webkit-border-radius: 6px!; -moz-border-radius: 6px!; -ms-border-radius: 6px!; -o-border-radius: 6px!; }
+.dark .react-datepicker {border-color: #3A4C64;}
+.react-datepicker__day { color: #0c2240; }
+.react-datepicker__header { background-color: #fff !important; }
+.dark .react-datepicker__day {color: #fff;}
+.dark .react-datepicker__day:hover {background-color: #0C2240 !important;}
+.dark .react-datepicker__header { background-color: #3A4C64 !important; }
+.dark .react-datepicker__current-month {color: #fff;}
+.dark .react-datepicker__day-name {color: #fff;}
+
 
 @keyframes fade-in {
   from {
@@ -108,6 +154,13 @@ select {
   .scrollable {
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
+  }
+
+  .center-img-slider .slick-dots li button:before {
+    font-size: 12px;
+  }
+  .center-img-slider .slick-dots {
+    bottom: 8px;
   }
 }
 
