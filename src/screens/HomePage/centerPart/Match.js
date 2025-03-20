@@ -96,13 +96,15 @@ const Match = () => {
               {league.titleWrps.map((titleWrp, titleWrpIndex) => (
                 <div key={titleWrpIndex} className={`title-wrp`}>
                   {titleWrp.matches.map((match, matchIndex) => (
-                    <Link
-                      to="/matchprofile"
+                    <div
                       key={matchIndex}
                       className="flex justify-between items-center max-sm:p-[12px_12px] py-2 s16:py-3 px-5 s18:p-[15px_23px] cursor-pointer"
                     >
                       {/* Teams */}
-                      <div className="cursor-pointer max-sm:w-1/2 max-lg:w-[400px] pr-1">
+                      <Link
+                        to="/matchprofile"
+                        className="cursor-pointer max-sm:w-1/2 max-lg:w-[400px] pr-1"
+                      >
                         <p className="text-mutedblue dark:text-white text-xs sm:text-sm s18:text-base font-normal leading-[143%] md:leading-tight s18:leading-[143%]">
                           {match.team1}
                         </p>
@@ -125,7 +127,7 @@ const Match = () => {
                             </span>
                           ))}
                         </p>
-                      </div>
+                      </Link>
 
                       {/* Odds */}
                       <div className="scrollable max-sm:w-full max-sm:max-w-[50%] max-lg:overflow-auto w-full lg:max-w-[520px] xl:max-w-[700px] s15:max-w-[550px] s18:max-w-[645px]">
@@ -193,7 +195,7 @@ const Match = () => {
                           ))}
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
               ))}
@@ -271,7 +273,7 @@ const StickyHeader = ({ isDarkMode }) => {
                       setOpen(false);
                     }}
                     inline
-                     calendarClassName="custom-calendar !bg-white dark:!bg-bluedarkmode"
+                    calendarClassName="custom-calendar !bg-white dark:!bg-bluedarkmode"
                   />
                 </div>
               )}
