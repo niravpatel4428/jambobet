@@ -6,7 +6,7 @@ const DetailNavbar = () => {
   return (
     <>
       {/*  */}
-      <div className="sticky top-10 sm:top-12 md:top-20 xl:top-16 s15:top-16 s18:top-20 shadow-dashboardshadow sm:!rounded-[12px_12px_0_0] bg-[#30435D] border-b border-doubleextralightwhite max-sm:mt-0 mt-3 s18:mt-[17px]">
+      <div className="sticky top-10 sm:top-12 md:top-20 xl:top-16 s15:top-16 s18:top-20 shadow-dashboardshadow sm:!rounded-[12px_12px_0_0] bg-[#30435D] border-b border-doubleextralightwhite max-sm:mt-0 mt-3 s18:mt-[17px] z-10">
         <div className="relative">
           <Link
             to="/home"

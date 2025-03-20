@@ -1,5 +1,6 @@
 export const leaguesData = [
   {
+    leagueId: 1,
     leagueTitle: "Premier League",
     titleWrps: [
       {
@@ -93,8 +94,8 @@ export const leaguesData = [
                 { label: "no", value: "3.50", highlight: true, high: false },
               ],
               drawnbet: [
-                {label:"1",value:"2.24"},
-                {label:"2",value:"2.40"},
+                { label: "1", value: "2.24" },
+                { label: "2", value: "2.40" },
               ],
             },
           },
@@ -187,8 +188,8 @@ export const leaguesData = [
                 { label: "no", value: "3.50", highlight: true, high: false },
               ],
               drawnbet: [
-                {label:"1",value:"2.24"},
-                {label:"2",value:"2.40"},
+                { label: "1", value: "2.24" },
+                { label: "2", value: "2.40" },
               ],
             },
           },
@@ -281,8 +282,8 @@ export const leaguesData = [
                 { label: "no", value: "3.50", highlight: true, high: false },
               ],
               drawnbet: [
-                {label:"1",value:"2.24"},
-                {label:"2",value:"2.40"},
+                { label: "1", value: "2.24" },
+                { label: "2", value: "2.40" },
               ],
             },
           },
@@ -375,8 +376,8 @@ export const leaguesData = [
                 { label: "no", value: "3.50", highlight: true, high: false },
               ],
               drawnbet: [
-                {label:"1",value:"2.24"},
-                {label:"2",value:"2.40"},
+                { label: "1", value: "2.24" },
+                { label: "2", value: "2.40" },
               ],
             },
           },
@@ -385,6 +386,7 @@ export const leaguesData = [
     ],
   },
   {
+    leagueId: 2,
     leagueTitle: "Italy / Serie A (1)",
     titleWrps: [
       {
@@ -478,8 +480,8 @@ export const leaguesData = [
                 { label: "no", value: "3.50", highlight: true, high: false },
               ],
               drawnbet: [
-                {label:"1",value:"2.24"},
-                {label:"2",value:"2.40"},
+                { label: "1", value: "2.24" },
+                { label: "2", value: "2.40" },
               ],
             },
           },
@@ -488,6 +490,7 @@ export const leaguesData = [
     ],
   },
   {
+    leagueId: 3,
     leagueTitle: "England / Championship (1)",
     titleWrps: [
       {
@@ -581,8 +584,8 @@ export const leaguesData = [
                 { label: "no", value: "3.50", highlight: true, high: false },
               ],
               drawnbet: [
-                {label:"1",value:"2.24"},
-                {label:"2",value:"2.40"},
+                { label: "1", value: "2.24" },
+                { label: "2", value: "2.40" },
               ],
             },
           },
@@ -675,8 +678,8 @@ export const leaguesData = [
                 { label: "no", value: "3.50", highlight: true, high: false },
               ],
               drawnbet: [
-                {label:"1",value:"2.24"},
-                {label:"2",value:"2.40"},
+                { label: "1", value: "2.24" },
+                { label: "2", value: "2.40" },
               ],
             },
           },

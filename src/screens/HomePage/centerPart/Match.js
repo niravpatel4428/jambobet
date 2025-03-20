@@ -24,6 +24,7 @@ const Match = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeOdd, setActiveOdd] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
+
   const [selectedOdd, setSelectedOdd] = useState(
     leaguesData[0]?.titleWrps[0]?.matches[0]?.odds[0][0] || null
   );
@@ -137,11 +138,7 @@ const Match = () => {
         {/* leage data */}
         <div className="main-dashboard-block">
           {leaguesData.map((league, leagueIndex) => (
-            <Link
-              key={leagueIndex}
-              to="/matchprofile"
-              className="main-title-block"
-            >
+            <div key={leagueIndex} className={`main-title-block`}>
               {/* League Title */}
               <div className="title-block flex justify-between items-center cursor-pointer max-sm:p-[10px_15px] p-[10px_23px] bg-bglightblue dark:bg-[#2F425C]">
                 <span className="text-[#404040] dark:text-white max-sm:text-xs text-sm font-medium leading-[128%]">
@@ -155,9 +152,10 @@ const Match = () => {
 
               {/* Title Wrapper */}
               {league.titleWrps.map((titleWrp, titleWrpIndex) => (
-                <div key={titleWrpIndex} className="title-wrp">
+                <div key={titleWrpIndex} className={`title-wrp`}>
                   {titleWrp.matches.map((match, matchIndex) => (
-                    <div
+                    <Link
+                      to="/matchprofile"
                       key={matchIndex}
                       className="flex justify-between items-center max-sm:p-[12px_12px] py-2 s16:py-3 px-5 s18:p-[15px_23px] cursor-pointer"
                     >
@@ -253,11 +251,11 @@ const Match = () => {
                           ))}
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               ))}
-            </Link>
+            </div>
           ))}
         </div>
       </div>
