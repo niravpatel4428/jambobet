@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import selectdropdownsvg from "../../../images/selectdropdownsvg.svg";
-import DetailNavbar from "./DetailNavbar";
-import HomeLayout from "../HomeLayout";
 
-const MatchDetail = ({ setShowDetail, showDetail }) => {
+const MatchDetail = () => {
   const [showDropdown, setShowDropdown] = useState({});
 
   const handleShow = (key) => {
@@ -13,9 +11,7 @@ const MatchDetail = ({ setShowDetail, showDetail }) => {
     }));
   };
   return (
-    <HomeLayout>
-      <DetailNavbar showDetail={showDetail} setShowDetail={setShowDetail} />
-      {/* match profile  */}
+    <>
       <div className="bg-white dark:bg-bluedarkmodecolor shadow-dashboardshadow sm:!rounded-[0_0_12px_12px]">
         {/* 1X2 */}
         <div className="w-full relative">
@@ -370,7 +366,7 @@ const MatchDetail = ({ setShowDetail, showDetail }) => {
           </div>
         </div>
       </div>
-    </HomeLayout>
+    </>
   );
 };
 
