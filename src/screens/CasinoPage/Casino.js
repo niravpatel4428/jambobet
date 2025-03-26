@@ -23,14 +23,11 @@ const Casino = () => {
                 <CenterImageSlider />
 
                 <>
-                  {/* Mobile navbar */}
-                  <MobileLeftPart />
-                </>
-                <>
                   <>
                     <Winners />
                   </>
                   <>
+                    <MobileLeftPart />
                     <CasinoCenter />
                   </>
                 </>
