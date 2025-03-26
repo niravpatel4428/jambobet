@@ -29,7 +29,7 @@ const MobileLeftPart = () => {
             <Link
               to={category.linktext}
               key={category.id}
-              className={`bg-transparent p-2 transition-all duration-300 group border-b-2 border-transparent ${category.active === true ? "border-yellow bg-black/10 dark:bg-bluedarkmodecolor" : ""}`}
+              className={`bg-transparent p-2 transition-all duration-300 group border-b-2 border-transparent ${category.active === true ? "border-yellow !bg-black/10 dark:!bg-bluedarkmodecolor" : ""}`}
             >
               <div className="flex flex-col items-center gap-2">
                 <span className="w-3 min-w-3 max-w-3 s15:w-4 s15:min-w-4 s15:max-w-4">
