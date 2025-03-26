@@ -8,6 +8,7 @@ import CenterImageSlider from "../../Components/CenterImageSlider";
 import CasinoCenter from "./casinoCenter/CasinoCenter";
 import BestSlipMobile from "./bestSlipMobileCasinoPage/bestSlipMobile";
 import Winners from "./Winners";
+import MobileLeftPart from "./casinoLeft/MobileLeftPart";
 const Casino = () => {
   return (
     <>
@@ -20,6 +21,11 @@ const Casino = () => {
             <div className="col-span-12 md:col-span-9 s15:col-span-7">
               <div className="flex flex-col gap-[10px] ">
                 <CenterImageSlider />
+
+                <>
+                  {/* Mobile navbar */}
+                  <MobileLeftPart />
+                </>
                 <>
                   <>
                     <Winners />

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+import mlogo from "../images/mobileLogo.png";
 import search from "../images/search.svg";
 import wallet from "../images/wallet.svg";
 import light from "../images/light.svg";
@@ -84,23 +85,24 @@ const Header = () => {
   return (
     <>
       <section className="sticky top-0 left-0 right-0 w-full bg-darkblue dark:bg-[#30435D] z-50 py-2 md:py-4">
-        <div className="flex max-xl:justify-between items-center w-full max-w-[1780px] mx-auto max-sm:px-[15px] px-[30px]">
+        <div className="flex max-xl:justify-between items-center w-full max-w-[1780px] mx-auto px-2 sm:px-[15px] md:px-[30px]">
           <div className="max-[420px]:relative z-[100] flex max-xl:pl-[30px]">
             <Link to="/" className="inline-block">
               <img
                 src={logo}
                 alt="logo"
-                className="object-cover w-10 sm:w-24 md:w-28 lg:w-36 s16:w-[180px]"
+                className="object-cover w-10 sm:w-24 md:w-28 lg:w-36 s16:w-[180px] hidden md:block"
+              />
+              <img
+                src={mlogo}
+                alt="logo"
+                className="object-cover max-md:block hidden w-16 sm:w-24"
               />
             </Link>
           </div>
-          <div className="max-xl:flex max-md:items-center xl:hidden gap-2">
-            <span className="p-1 sm:p-2 md:hidden max-md:flex justify-center items-center bg-white rounded-sm md:rounded-5px cursor-pointer">
-              <img
-                src={isDarkMode ? search : search}
-                alt="search"
-                className=" w-4"
-              />
+          <div className="max-xl:flex max-md:items-center xl:hidden gap-1 sm:gap-2">
+            <span className="p-1 h-6 md:hidden max-md:flex justify-center items-center bg-white rounded-sm md:rounded-5px cursor-pointer">
+              <img src={isDarkMode ? search : search} alt="search" className="w-3" />
             </span>
             {/* search btn */}
             <div className="relative max-md:hidden">
@@ -130,25 +132,16 @@ const Header = () => {
             {/* login btn */}
             <button
               onClick={openModal}
-              className="max-md:dark:hover:bg-white max-md:hover:bg-white max-md:dark:bg-white max-md:text-[0px] w-fit bg-white shadow-inputshadow border-2 border-transparent rounded-sm md:rounded-5px inline-flex items-center justify-center p-1 sm:p-2 text-base leading-none font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
+              className="max-md:dark:hover:bg-white max-md:hover:bg-white max-md:dark:bg-white w-fit bg-white shadow-inputshadow border-2 border-transparent rounded-sm md:rounded-5px p-1 sm:p-2 text-[8px] sm:text-xs leading-normal font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-darkblue hover:opacity-80"
             >
               Login
-              <img
-                src={isDarkMode ? login : login}
-                alt="search"
-                className="md:hidden w-3 sm:w-4"
-              />
             </button>
             {/* theme btn */}
             <button
               onClick={toggleTheme}
               className="md:w-[48px] md:h-[50px] flex justify-center items-center py-1 px-1 sm:p-2 bg-white dark:bg-blueshade rounded-sm md:rounded-5px"
             >
-              <img
-                src={isDarkMode ? dark : light}
-                alt={"Light Mode"}
-                className="max-md:size-4"
-              />
+              <img src={isDarkMode ? dark : light} alt={"Light Mode"} className="max-md:size-4" />
             </button>
           </div>
           {/* big screen links */}
@@ -174,11 +167,7 @@ const Header = () => {
                   className="h-full xl:w-[150px] s16:w-full p-[8px_40px_8px_12px] s18:p-[11px_40px_11px_15px] rounded-5px bg-white dark:bg-[#4F5F75] shadow-inputshadow placeholder:text-lightblue placeholder:text-base placeholder:!leading-none s18: s18:placeholder:leading-normal dark:placeholder:text-white dark:text-white"
                   placeholder="Search.."
                 />
-                <img
-                  src={isDarkMode ? darksearch : search}
-                  alt="search"
-                  className="absolute w-[18px] h-[18px] top-[50%] translate-y-[-50%] right-[15px] z-50"
-                />
+                <img src={isDarkMode ? darksearch : search} alt="search" className="absolute w-[18px] h-[18px] top-[50%] translate-y-[-50%] right-[15px] z-50" />
               </div>
               {/* joinnow btn */}
               <button
@@ -190,7 +179,7 @@ const Header = () => {
               {/* login btn */}
               <button
                 onClick={openModal}
-                className="min-w-[88px] bg-white shadow-inputshadow  border-solid border-2 border-transparent rounded-5px inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-base !leading-none s18:leading-normal font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
+                className="min-w-[88px] bg-white shadow-inputshadow border-solid border-2 border-transparent rounded-5px inline-flex items-center justify-center p-2 px-2 s18:p-[11px_8px] text-sm s18:text-base !leading-none s18:leading-normal font-medium transition-all duration-300 dark:bg-[#4F5F75] dark:text-white hover:bg-transparent hover:border-white hover:text-white dark:hover:border-white dark:hover:bg-transparent"
               >
                 Login
               </button>
@@ -199,11 +188,7 @@ const Header = () => {
                 onClick={toggleTheme}
                 className="s18:w-[48px] s18:h-[50px] flex justify-center items-center p-2 s18:p-[10px] bg-white dark:bg-blueshade rounded-5px"
               >
-                <img
-                  src={isDarkMode ? dark : light}
-                  alt={"Light Mode"}
-                  className="size-5 s18:size-[26px]"
-                />
+                <img src={isDarkMode ? dark : light} alt={"Light Mode"} className="size-5 s18:size-[26px]" />
               </button>
             </div>
           </div>

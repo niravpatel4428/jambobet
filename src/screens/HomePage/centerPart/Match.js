@@ -265,7 +265,7 @@ const StickyHeader = ({ isDarkMode }) => {
                 />
               </div>
               {open && (
-                <div className="absolute top-12 right-0 z-50">
+                <div className="absolute top-6 sm:top-8 s18:top-12 right-0 z-50">
                   <DatePicker
                     selected={startDate}
                     onChange={(date) => {
